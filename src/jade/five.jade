@@ -1,0 +1,49 @@
+extend includes/_layout
+block title
+	title 5
+block body
+	body.s5
+		.wrapper
+			.wrapper__in
+				.text-center
+					.s5__title
+						img(src='img/5/text.png')
+				.row.text-left
+					.col
+						.row
+							img(src='img/5/text-1.png')
+							.s5__slider.row
+								.s5__col
+									input.s5__range.js-5-range-1(type='text')
+								.s5__col
+									.s5__value.js-5-value-1
+						.row
+							img(src='img/5/text-2.png')
+							.s5__slider.row
+								.s5__col
+									input.s5__range.js-5-range-2(type='text')
+								.s5__col
+									.s5__value.js-5-value-2
+					.col
+						img(src='img/5/text-3.png')
+						.s5__radios
+							.s5__row.row
+								.s5__radios-col
+									.s5__radios-row.row
+										input.radio(name='s5radio' type='radio' id='radio1' checked)
+										label.radio-label(for='radio1') 0-100
+								.s5__radios-col
+									.s5__radios-row.row
+										input.radio(name='s5radio' type='radio' id='radio2')
+										label.radio-label(for='radio2') 200-300
+							.s5__row.row
+								.s5__radios-col
+									.s5__radios-row.row
+										input.radio(name='s5radio' type='radio' id='radio3')
+										label.radio-label(for='radio3') 100-200
+								.s5__radios-col
+									.s5__radios-row.row
+										input.radio(name='s5radio' type='radio' id='radio4')
+										label.radio-label(for='radio4') 300-400
+	block js
+		script(src="app.js")

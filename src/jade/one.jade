@@ -1,0 +1,16 @@
+extend includes/_layout
+block title
+	title 1
+block body
+	body.s1
+		.wrapper
+			.wrapper__in
+				.s1__slider.js-1-slider
+					.s1__circle.s1__circle_left
+					.s1__line.js-1-line
+					.s1__circle.s1__circle_right.js-1-circle
+						.s1__circle-in
+						.s1__circle-in
+						.s1__circle-in
+	block js
+		script(src="app.js")

@@ -1,0 +1,751 @@
+// fonts
+$default-fonts: Arial, sans-serif
+//=sans
+	font-family: 'Open Sans', $default-fonts
++font('Roboto Bold', 'Roboto-Bold')
++font('Roboto Medium', 'Roboto-Medium')
++font('Roboto Regular', 'Roboto-Regular')
++font('Roboto Condensed Regular', 'RobotoCondensed-Regular')
+
+=roboto-b
+	font-family: 'Roboto Bold', $default-fonts
+=roboto-m
+	font-family: 'Roboto Medium', $default-fonts
+=roboto
+	font-family: 'Roboto Regular', $default-fonts
+=roboto-c
+	font-family: 'Roboto Condensed Regular', $default-fonts
+
+// colors
+// $black: #000
+
+
+/* ===================================
+	 Main Styles
+	 =================================== */
+body
+	min-width: 320px
+	+roboto
+	font-size: 16px
+	color: #333
+	line-height: 1.42857
+
+.wrapper
+	overflow: hidden
+	margin: 0 auto
+	height: 100%
+	+vertical
+	&__in
+		width: 100%
+		padding-left: 60px
+		padding-right: 60px
+		display: inline-block
+		vertical-align: middle
+
+.wrap
+	//+container
+	transition: all 0.3s
+	
+.row
+	+pie-clearfix
+
+
+/* Helpers
+	----------------------------------- */
+*
+	user-select: none
+
+button
+	background-color: transparent
+
+a:hover, a:focus
+	text-decoration: none
+
+a
+	color: inherit
+	text-decoration: none
+
+table
+	vertical-align: top
+
+img
+	vertical-align: top
+	max-width: 100%
+	height: auto
+
+.icon
+	display: inline
+	vertical-align: middle
+
+.text-left
+	text-align: left
+
+.text-center
+	text-align: center
+
+.text-right
+	text-align: right
+
+.is-hidden
+	display: none
+
+.cfx
+	+pie-clearfix
+	
+.icons
+	font-size: 0
+
+.btn
+	display: inline-block
+	padding: 10px 50px
+	font-size: 15px
+	color: #a9aab3
+	line-height: 20px
+	text-transform: uppercase
+	border: 2px solid #a9aab3
+	border-radius: 44px
+	&_blue
+		padding: 12px 52px
+		color: #ffffff
+		background-image: linear-gradient(221deg, #35c7fb 0%, #1896f5 100%)
+		box-shadow: 0 23px 29px rgba(71, 175, 255, 0.47)
+		border: none
+		transition: all 0.2s
+		&:active
+			box-shadow: 0 7px 20px rgba(71, 175, 255, 0.67)
+			transform: scale(0.82)
+		
+.col
+	float: left
+	width: 50%
+	padding-left: 0
+	padding-right: 30px
+	& + &
+		padding-left: 30px
+		padding-right: 0
+		
+.plus-btn
+	position: relative
+	width: 46px
+	height: 46px
+	border-radius: 50%
+	background-color: #0099f5
+	box-shadow: 0 11px 21px rgba(0, 151, 244, 0.54)
+	transition: all 0.2s
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		border-radius: 50%
+		border: 1px solid rgba(0, 151, 244, 0.4)
+		animation: pulse-btn 3s infinite
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		border-radius: 50%
+		border: 1px solid rgba(0, 151, 244, 0.4)
+		animation: pulse-btn 3s infinite
+		animation-delay: 0.85s
+	&:active
+		transform: scale(0.82)
+	&__text
+		&_plus
+			+cover
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 0
+				right: 0
+				margin-top: -1px
+				margin-left: auto
+				margin-right: auto
+				width: 23px
+				height: 3px
+				border-radius: 2px
+				background-color: #ffffff
+			&:after
+				content: ''
+				position: absolute
+				top: 12px
+				left: 0
+				right: 0
+				margin-left: auto
+				margin-right: auto
+				width: 3px
+				height: 23px
+				border-radius: 2px
+				background-color: #ffffff
+				transition: all 0.2s
+	&.is-minus &__text
+		&:after
+			opacity: 0
+		
+@keyframes pulse-btn
+	0%
+		transform: scale(1)
+		opacity: 0
+	10%
+		transform: scale(1)
+		opacity: 1
+	100%
+		transform: scale(1.75)
+		opacity: 0
+	
+		
+.rel
+	position: relative
+		
+
+
+/* ===================================
+	 Header
+	 =================================== */
+//.header
+
+
+/* ===================================
+	 Footer
+	 =================================== */
+//.footer
+	margin-top: -40px
+	height: 40px
+
+
+/* ===================================
+	 Main
+	 =================================== */
+
+/* ===================================
+	 #1
+	 =================================== */
+.s1
+	background: url('img/1/1.png') center center no-repeat
+	background-size: cover
+	&__slider
+		position: absolute
+		left: 0
+		right: 0
+		margin-left: auto
+		margin-right: auto
+		bottom: 150px
+		width: 606px
+		+pie-clearfix
+	&__line
+		position: absolute
+		display: block
+		top: 50%
+		left: 82px
+		right: 82px
+		margin-top: -1px
+		height: 1px
+		background-color: #868792
+	&__circle
+		position: relative
+		width: 82px
+		height: 82px
+		background-color: rgba(255, 255, 255, 0.03)
+		border: 1px solid #868792
+		border-radius: 50%
+		&_left
+			float: left
+		&_right
+			float: right
+			border: 1px dashed white
+		&-in
+			+ratio-in
+			opacity: 0
+			border: 1px solid rgba(255,255,255,.24)
+			border-radius: 50%
+			animation: s1-pulse 6s infinite
+			& + &
+				animation-delay: 1s
+			& + & + &
+				animation-delay: 2s
+		
+@keyframes s1-pulse
+	0%
+		opacity: 0
+	50%
+		opacity: 0
+	60%
+		opacity: 0
+		transform: scale(1)
+	65%
+		opacity: 1
+	100%
+		opacity: 0
+		transform: scale(1.75)
+		
+/* ===================================
+	 #2
+	 =================================== */
+.s2
+	&__btn
+		position: absolute
+		bottom: 40px
+		left: 0
+		right: 0
+		margin-left: auto
+		margin-right: auto
+	&__nav
+		margin: 40px 50px 75px
+		font-size: 18px
+		color: rgba(93, 93, 93, .75)
+		line-height: 56px
+		text-align: center
+		border: 1px solid #d9d9d9
+		border-radius: 100px
+		+pie-clearfix
+		&-link
+			position: relative
+			float: left
+			width: 33.333%
+			transition: 0.5s
+			&-text
+				position: relative
+				z-index: 1
+			&.is-active
+				color: #ffffff
+			&:last-child
+				&:before
+					content: ''
+					position: absolute
+					pointer-events: none
+					z-index: 0
+					top: 0
+					bottom: 0
+					right: 0
+					border-radius: 100px
+					background-color: #4ba9f8
+					box-shadow: 0 2px 10px rgba(44, 142, 225, 0.5)
+					width: 100%
+					transition: all 0.5s
+			&:nth-child(1).is-active ~ &:last-child
+				&:before
+					right: 200%
+			&:nth-child(2).is-active ~ &:last-child
+				&:before
+					right: 100%
+	&__tab
+		display: none
+		height: 360px
+		margin-left: auto
+		margin-right: auto
+		&.is-active
+			display: block
+		
+		
+/* ===================================
+	 #4
+	 =================================== */
+.s4
+	background: url(img/4/bg.png) center center no-repeat
+	background-size: cover
+	&__controls
+		margin-top: 50px
+	&__btn
+		& + &
+			margin-left: 40px
+		
+
+/* ===================================
+	 #5
+	 =================================== */
+.s5
+	&__title
+		margin-bottom: 60px
+	&__slider
+		margin-top: 20px
+		margin-bottom: 40px
+	&__col
+		position: relative
+		z-index: 2
+		float: left
+		padding-left: 20px
+		padding-right: 20px
+		width: calc(100% - 112px)
+		background-color: #ffffff
+		box-shadow: 0 12px 29px rgba(71, 175, 255, 0.36)
+		border-radius: 3px 0 0 3px
+		& + &
+			z-index: 1
+			float: right
+			padding-left: 0
+			padding-right: 0
+			width: 112px
+		.irs
+			height: 80px
+			border-radius: 3px 0 0 3px
+			&-slider
+				top: 23px
+				width: 34px
+				height: 34px
+				background: #ffffff
+				border: 1px solid #e0e0e0
+				box-shadow: 0 6px 10px rgba(88, 158, 249, .35)
+				&:before
+					content: ''
+					position: absolute
+					width: 21px
+					height: 21px
+					border-radius: 50%
+					background-color: #ffc400
+					+vcenter
+			&-line
+				top: 38px
+				height: 5px
+				border: none
+				background: #d0d0d0
+			&-bar
+				top: 38px
+				height: 5px
+				border: none
+				background: #ffc400
+				&-edge
+					top: 38px
+					width: 17px
+					height: 5px
+					border: none
+					background: #ffc400
+	&__value
+		height: 80px
+		+roboto-b
+		font-size: 36px
+		color: #ffffff
+		line-height: 80px
+		text-align: center
+		background-color: #23a8f7
+		box-shadow: 0 16px 29px rgba(71, 175, 255, 0.28)
+		border-radius: 0 3px 3px 0
+	&__radios
+		margin-top: 20px
+		padding: 25px 50px
+		font-size: 18px
+		color: #949494
+		line-height: 24px
+		text-align: left
+		border-radius: 3px
+		box-shadow: 0 12px 29px rgba(71, 175, 255, 0.36)
+		&-col
+			float: left
+			width: 50%
+			& + &
+				padding-left: 30px
+	&__row
+		& + &
+			margin-top: 30px
+
+.radio
+	display: none
+	visibility: hidden
+	&:checked + &-label
+		&:after
+			opacity: 1
+			transform: scale(1)
+.radio-label
+	position: relative
+	padding-left: 50px
+	&:before
+		content: ''
+		position: absolute
+		z-index: 1
+		top: -5px
+		left: 0
+		width: 30px
+		height: 30px
+		background-color: #ffffff
+		border-radius: 50%
+		border: 2px solid #e0e0e0
+	&:after
+		content: ''
+		position: absolute
+		z-index: 2
+		width: 20px
+		height: 20px
+		background-color: #0089ff
+		border-radius: 50%
+		top: 2px
+		left: 7px
+		opacity: 0
+		transform: scale(0.1)
+		transition: all 0.2s
+		
+
+/* ===================================
+	 #8
+	 =================================== */
+.s8
+	&__col
+		float: left
+		width: 55%
+		& + &
+			width: 45%
+	&__title
+		margin-top: 150px
+	&__wallet
+		max-width: 120%
+	&__plus-btn
+		position: absolute
+		z-index: 10
+		top: 195px
+		right: 65px
+	&__info
+		display: none
+		margin-top: 60px
+		animation-delay: 1s
+	&__money
+		display: none
+		position: absolute
+		top: 120px
+		right: 0
+		z-index: 1
+	
+
+/* ===================================
+	 #10
+	 =================================== */
+.s10
+	&__nav-wrap
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 40px
+	&__nav
+		overflow: hidden
+		margin-left: auto
+		margin-right: auto
+		width: 514px
+		font-size: 16px
+		color: rgba(93, 93, 93, .75)
+		line-height: 40px
+		text-align: center
+		border-radius: 3px
+		box-shadow: 0 12px 29px rgba(71, 175, 255, 0.36)
+		+pie-clearfix
+		&-link
+			position: relative
+			float: left
+			width: 33.333%
+			border-left: 1px solid transparent
+			transition: 0.5s
+			&:before
+				z-index: 2
+			& + &
+				border-left: 1px solid #e9e9e9
+			&-text
+				position: relative
+				z-index: 1
+			&.is-active
+				color: #ffffff
+			&:last-child
+				&:before
+					content: ''
+					position: absolute
+					pointer-events: none
+					z-index: 0
+					top: 0
+					bottom: 0
+					right: -1px
+					background-color: #4ba9f8
+					box-shadow: 0 2px 10px rgba(44, 142, 225, 0.5)
+					width: calc(100% + 2px)
+					transition: all 0.5s
+			&:nth-child(1).is-active ~ &:last-child
+				&:before
+					right: 200%
+					width: calc(100% + 3px)
+			&:nth-child(2).is-active ~ &:last-child
+				&:before
+					right: 100%
+					width: calc(100% + 4px)
+	&__tab
+		display: none
+		height: 380px
+		&.is-active
+			display: block
+	&__title
+		margin-bottom: 20px
+	&__shadow
+		&-1
+			position: absolute
+			bottom: -100px
+			left: 5%
+			opacity: 0.3
+			max-width: 70%
+			transition: all 0.5s
+			&.is-active
+				max-width: 100%
+				opacity: 1
+	//IMAGE animation
+	&__img
+		&_1
+			transition: all 0.5s
+			&.is-active
+				transform: translateY(70px) rotateZ(10deg) translateZ(0)
+		&_margin
+			margin-top: 40px
+		&-1
+			animation: move-1-1 0.5s forwards
+			&.is-active
+				animation: move-2-1 0.5s forwards
+		&-2
+			animation: move-1-2 0.5s forwards
+			&.is-active
+				animation: move-2-2 0.5s forwards
+		&-3
+			margin-top: 100px
+			margin-right: 50px
+			width: 50%
+			opacity: 0
+			transition: all 0.5s
+			&.is-active
+				margin-top: 0
+				margin-right: 0
+				width: 100%
+				opacity: 1
+		&-4
+			animation: move-1-4 0.5s forwards
+			&.is-active
+				animation: move-2-4 0.5s forwards
+		&-5
+			margin-top: 200px
+			margin-left: 100px
+			width: 50%
+			opacity: 0
+			transition: all 0.5s
+			&.is-active
+				margin-top: 0
+				margin-left: 0
+				width: 100%
+				opacity: 1
+	//BOX animation
+	&__box
+		position: absolute
+		transition: all 0.5s
+		animation: pulse-1 6s infinite, rotate-1 0.5s
+		&_1
+			right: 20%
+			top: 0
+			width: 35%
+			transition: all 0.5s
+			&.is-active
+				width: 40%
+		&_2
+			right: 0
+			bottom: 0
+			animation-duration: 5s
+		&_3
+			top: -5%
+			right: 25%
+			animation-duration: 4s
+		&_4
+			bottom: 25%
+			left: 37%
+			animation-duration: 3.5s
+		&_5
+			top: -20%
+			left: 20%
+			animation-duration: 2.5s
+	&__col
+		float: left
+		width: 55%
+		& + &
+			width: 45%
+		&_1
+			margin-top: -120px
+			padding-left: 50px
+	&__btn
+		&_1
+			position: absolute
+			z-index: 10
+			top: 42%
+			left: 52%
+		&_2
+			position: absolute
+			z-index: 10
+			left: 50%
+			top: 32%
+	&__img
+		&-tab-2-1
+			position: absolute
+			left: 8%
+			top: -11%
+			transform: scale(1)
+			animation: pulse-2-1 2s linear infinite
+		&-tab-2-2
+			display: none
+			position: absolute
+			left: 20%
+			top: 0
+			max-width: 69%
+			width: 69%
+
+@keyframes pulse-1
+	0%
+		transform: translateY(-5px) rotateX(-20deg) rotateY(-5deg) translateZ(0)
+	45%
+		transform: translateY(5px) rotateX(10deg) rotateY(10deg) translateZ(0)
+	100%
+		transform: translateY(-5px) rotateX(-20deg) rotateY(-5deg) translateZ(0)
+		
+@keyframes move-1-1
+	0%
+		transform: translateX(-200px) translateY(100px) rotateZ(-120deg) translateZ(0)
+	100%
+		transform: translateX(0) translateY(0) rotateZ(0deg) translateZ(0)
+		
+@keyframes move-2-1
+	0%
+		transform: translateX(0) translateY(0) rotateZ(0deg) translateZ(0)
+	100%
+		transform: translateX(-200px) translateY(100px) rotateZ(-120deg) translateZ(0)
+		
+@keyframes move-1-2
+	0%
+		transform: translateY(50px) rotateZ(45deg) translateZ(0)
+	100%
+		transform: translateY(0) rotateZ(0deg) translateZ(0)
+
+@keyframes move-2-2
+	0%
+		transform: translateY(0) rotateZ(0deg) translateZ(0)
+	100%
+		transform: translateY(50px) rotateZ(45deg) translateZ(0)
+		
+@keyframes move-1-4
+	0%
+		transform: translateY(75px) translateX(-50px) rotateZ(-70deg) translateZ(0)
+	100%
+		transform: translateY(0) translateX(0) rotateZ(0deg) translateZ(0)
+
+@keyframes move-2-4
+	0%
+		transform: translateY(0) translateX(0) rotateZ(0deg) translateZ(0)
+	100%
+		transform: translateY(75px) translateX(-50px) rotateZ(-70deg) translateZ(0)
+		
+@keyframes pulse-2-1
+	0%
+		transform: scale(1)
+	25%
+		transform: scale(0.9)
+	50%
+		transform: scale(1)
+	75%
+		transform: scale(1.05)
+	100%
+		transform: scale(1)
+		
+
+/* ===================================
+	 Other Styles
+	 =================================== */
+

@@ -1,0 +1,18 @@
+extend includes/_layout
+block title
+	title 8
+block body
+	body.s8
+		.wrapper
+			.rel.wrapper__in
+				.s8__plus-btn.plus-btn.js-plus-btn.js-8-btn
+					.plus-btn__text.plus-btn__text_plus
+				.row
+					.s8__col.text-left
+						img.s8__title(src='img/8/text.png')
+						img.s8__info.animated.js-8-info(src='img/8/info.png')
+					.s8__col.rel
+						img.s8__wallet(src='img/8/wallet.png')
+						img.s8__money.animated.js-8-money(src='img/8/money.png')
+	block js
+		script(src="app.js")
