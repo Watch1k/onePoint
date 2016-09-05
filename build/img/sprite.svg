@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-left-arrow" viewBox="0 0 36 34">
+    <title>
+        Fill 7
+    </title>
+    <path d="M0 16.902l16.904 16.902v-6.373h18.638V6.657H16.904V0z" fill-rule="evenodd" opacity=".34"/>
+</symbol><symbol id="icon-right-arrow" viewBox="0 0 36 34">
+    <title>
+        Fill 7
+    </title>
+    <path d="M35.542 16.902L18.638 0v6.374H0v20.773h18.638v6.657z" fill-rule="evenodd" opacity=".34"/>
+</symbol></svg>

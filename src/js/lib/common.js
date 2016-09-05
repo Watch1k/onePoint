@@ -145,21 +145,38 @@
 /* Slide 10 */
 (function () {
 	var btn1 = $('.js-10-btn-1'),
-		img1 = $('.js-10-img-1'),
+		img = $('.js-10-img'),
 		shadow1 = $('.js-10-shadow-1'),
 		btn2 = $('.js-10-btn-2'),
-		img2 = $('.js-10-img-2'),
-		img3 = $('.js-10-img-3');
+		text = $('.js-10-text');
 
 	btn1.on('click', function () {
 		$(this).siblings('.s10__box').toggleClass('is-active').children('img').toggleClass('is-active');
-		img1.toggleClass('is-active');
+		$(this).siblings().filter(img).toggleClass('is-active');
 		shadow1.toggleClass('is-active');
+		//text
+		$(this).parent().siblings().filter(text).children().toggle();
 	});
 
 	btn2.on('click', function () {
-		img2.toggleClass('is-active').fadeToggle();
-		img3.toggleClass('is-active').fadeToggle();
+		$(this).siblings().filter(img).toggleClass('is-active').not(':first-child').fadeToggle();
+		//text
+		$(this).parent().siblings().filter(text).children().toggle();
 	});
+
+})();
+
+/* Slide 11 */
+(function () {
+
+})();
+
+/* Slide 12 */
+(function () {
+
+})();
+
+/* Slide 13 */
+(function () {
 
 })();
