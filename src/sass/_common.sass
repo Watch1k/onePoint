@@ -245,6 +245,8 @@ img
 .s1
 	background: url('img/1/1.png') center center no-repeat
 	background-size: cover
+	&__wrapper
+		pointer-events: none
 	&__slider
 		position: absolute
 		left: 0
@@ -271,10 +273,11 @@ img
 		border: 1px solid #868792
 		border-radius: 50%
 		&_left
+			pointer-events: auto
 			float: left
+			border: 1px dashed white
 		&_right
 			float: right
-			border: 1px dashed white
 		&-in
 			+ratio-in
 			opacity: 0
@@ -815,7 +818,7 @@ img
 		&-text
 			position: absolute
 			z-index: 2
-			top: 380px
+			top: 350px
 			right: 170px
 	&__back
 		position: absolute
@@ -836,7 +839,7 @@ img
 	&__pulse
 		position: absolute
 		right: 0
-		width: 720px
+		width: 740px
 		top: 0
 		bottom: 0
 		
@@ -845,17 +848,300 @@ img
 		position: absolute
 		left: 0
 		top: 0
-		opacity: 0.8
 		color: #d8d8d8
+		font-size: 30px
+		animation-duration: 0.75s
+		animation-iteration-count: infinite
+		animation-direction: alternate
 		.icon
 			font-size: inherit
-	&-1
-		&__in
-			&:nth-child(1)
-				left: 25%
-				top: 10%
-				transform: rotate(-35deg)
-				
+		//element 1
+		&:nth-child(1)
+			top: -70px
+			left: 371px
+			opacity: 0.06
+			font-size: 120px
+			animation-name: anim-1
+			animation-delay: 0.00s
+		&:nth-child(2)
+			top: 32px
+			left: 224px
+			opacity: 0.25
+			font-size: 65px
+			animation-name: anim-2
+			animation-delay: 0.05s
+		&:nth-child(3)
+			top: 82px
+			left: 22px
+			opacity: 0.05
+			font-size: 97px
+			animation-name: anim-3
+			animation-delay: 0.30s
+		&:nth-child(4)
+			top: 187px
+			left: 367px
+			opacity: 1
+			font-size: 65px
+			animation-name: anim-4
+			animation-delay: 0.75s
+		&:nth-child(5)
+			top: 224px
+			left: 560px
+			opacity: 0.31
+			font-size: 65px
+			animation-name: anim-5
+			animation-delay: 0.50s
+		&:nth-child(6)
+			top: 263px
+			left: 53px
+			opacity: 0.31
+			font-size: 49px
+			animation-name: anim-6
+			animation-delay: 0.85s
+		&:nth-child(7)
+			top: 365px
+			left: 67px
+			opacity: 0.45
+			font-size: 65px
+			animation-name: anim-7
+			animation-delay: 0.30s
+		&:nth-child(8)
+			top: 502px
+			left: 102px
+			opacity: 0.31
+			font-size: 53px
+			animation-name: anim-8
+			animation-delay: 0.55s
+		&:nth-child(9)
+			top: 482px
+			left: 305px
+			opacity: 0.45
+			font-size: 49px
+			animation-name: anim-9
+			animation-delay: 0.10s
+		&:nth-child(10)
+			top: 490px
+			left: 455px
+			opacity: 0.25
+			font-size: 65px
+			animation-name: anim-10
+			animation-delay: 0.45s
+		&:nth-child(11)
+			top: 435px
+			font-size: 97px
+			opacity: 0.05
+			left: 574px
+			animation-name: anim-11
+			animation-delay: 0.80s
+		&:nth-child(12)
+			top: 590px
+			font-size: 118px
+			opacity: 0.07
+			left: 0
+			animation-name: anim-12
+			animation-delay: 0.60s
+		&:nth-child(13)
+			top: 639px
+			font-size: 118px
+			opacity: 0.06
+			left: 307px
+			animation-name: anim-13
+			animation-delay: 0.70s
+		&:nth-child(14)
+			top: 606px
+			font-size: 88px
+			opacity: 0.06
+			left: 524px
+			animation-name: anim-14
+			animation-delay: 0.90s
+		//element 2
+		&:nth-child(15)
+			top: 70px
+			font-size: 53px
+			opacity: 0.23
+			left: 357px
+			animation-name: anim2-15
+			animation-delay: 0.00s
+		&:nth-child(16)
+			top: -52px
+			font-size: 92px
+			opacity: 0.04
+			left: 26px
+			animation-name: anim2-16
+			animation-delay: 0.10s
+		&:nth-child(17)
+			top: 158px
+			font-size: 27px
+			opacity: 0.17
+			left: 464px
+			animation-name: anim2-17
+			animation-delay: 0.20s
+		&:nth-child(18)
+			top: 338px
+			font-size: 31px
+			opacity: 0.23
+			left: 14px
+			animation-name: anim2-18
+			animation-delay: 0.00s
+		&:nth-child(19)
+			top: 309px
+			font-size: 54px
+			opacity: 0.23
+			left: 622px
+			animation-name: anim2-19
+			animation-delay: 0.50s
+		&:nth-child(20)
+			top: 448px
+			font-size: 57px
+			opacity: 0.23
+			left: 21px
+			animation-name: anim2-20
+			animation-delay: 0.70s
+		&:nth-child(21)
+			top: 585px
+			font-size: 27px
+			opacity: 0.17
+			left: 264px
+			animation-name: anim2-21
+			animation-delay: 0.30s
+		&:nth-child(22)
+			top: 585px
+			font-size: 54px
+			opacity: 0.23
+			left: 339px
+			animation-name: anim2-22
+			animation-delay: 0.40s
+		&:nth-child(23)
+			top: 687px
+			font-size: 92px
+			opacity: 0.04
+			left: 465px
+			animation-name: anim2-23
+			animation-delay: 0.30s
+		//element 3
+		&:nth-child(24)
+			top: 139px
+			font-size: 24px
+			opacity: 0.21
+			left: 158px
+			animation-name: anim3-24
+			animation-delay: 0.0s
+		&:nth-child(25)
+			top: 85px
+			font-size: 36px
+			opacity: 0.04
+			left: 522px
+			animation-name: anim3-25
+			animation-delay: 0.5s
+		&:nth-child(26)
+			top: 227px
+			font-size: 43px
+			opacity: 0.36
+			left: 460px
+			animation-name: anim3-26
+			animation-delay: 0.2s
+		&:nth-child(27)
+			top: 442px
+			font-size: 32px
+			opacity: 0.36
+			left: 153px
+			animation-name: anim3-27
+			animation-delay: 0.6s
+		&:nth-child(28)
+			top: 499px
+			font-size: 43px
+			opacity: 0.36
+			left: 224px
+			animation-name: anim3-28
+			animation-delay: 0.5s
+		&:nth-child(29)
+			top: 524px
+			font-size: 24px
+			opacity: 0.21
+			left: 422px
+			animation-name: anim3-29
+			animation-delay: 0.1s
+		&:nth-child(30)
+			top: 648px
+			font-size: 56px
+			opacity: 0.04
+			left: 179px
+			animation-name: anim3-30
+			animation-delay: 0.8s
+		//element 4
+		&:nth-child(31)
+			top: 170px
+			font-size: 34px
+			opacity: 0.12
+			left: 300px
+			animation-name: anim4-31
+			animation-delay: 0.0s
+		&:nth-child(32)
+			top: 128px
+			font-size: 37px
+			opacity: 0.60
+			left: 443px
+			animation-name: anim4-32
+			animation-delay: 0.7s
+		&:nth-child(33)
+			top: 457px
+			font-size: 23px
+			opacity: 0.60
+			left: 226px
+			animation-name: anim4-33
+			animation-delay: 0.2s
+		&:nth-child(34)
+			top: 601px
+			font-size: 37px
+			opacity: 0.60
+			left: 293px
+			animation-name: anim4-34
+			animation-delay: 0.6s
+		//element 5
+		&:nth-child(35)
+			top: 161px
+			font-size: 27px
+			opacity: 0.33
+			left: 184px
+			animation-name: anim5-35
+			animation-delay: 0.0s
+		&:nth-child(36)
+			top: 227px
+			font-size: 22px
+			opacity: 0.80
+			left: 300px
+			animation-name: anim5-36
+			animation-delay: 0.7s
+		&:nth-child(37)
+			top: 160px
+			font-size: 29px
+			opacity: 0.23
+			left: 564px
+			animation-name: anim5-37
+			animation-delay: 0.3s
+		&:nth-child(38)
+			top: 479px
+			font-size: 22px
+			opacity: 0.80
+			left: 401px
+			animation-name: anim5-38
+			animation-delay: 0.1s
+		&:nth-child(39)
+			top: 579px
+			font-size: 29px
+			opacity: 0.23
+			left: 143px
+			animation-name: anim5-39
+			animation-delay: 0.8s
+		&:nth-child(40)
+			top: 589px
+			font-size: 27px
+			opacity: 0.33
+			left: 544px
+			animation-name: anim5-40
+			animation-delay: 0.9s
+	
+
 
 /* ===================================
 	 #8
@@ -1241,6 +1527,8 @@ img
 .s13
 	background: url('img/13/1.png') center center no-repeat
 	background-size: cover
+	&__wrapper
+		pointer-events: none
 	
 
 /* ===================================
@@ -1249,7 +1537,10 @@ img
 .s14
 	background: url('img/14/1.png') center center no-repeat
 	background-size: cover
+	&__wrapper
+		pointer-events: none
 	&__send
+		pointer-events: auto
 		position: absolute
 		top: 40%
 		right: 280px

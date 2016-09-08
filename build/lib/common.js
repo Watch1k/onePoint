@@ -13,26 +13,30 @@
 (function () {
 	var slider = $('.js-1-slider'),
 		circle = $('.js-1-circle'),
-		line = $('.js-1-line');
+		line = $('.js-1-line'),
+		ind = false;
 
 	circle.on('mouseup', function () {
 		$(this).animate({'left': '0'}, 500);
-		line.animate({'right': 82}, 500);
+		line.animate({'left': 82}, 500);
 	});
 
 	circle.draggable({
 		containment: slider,
 		axis: 'x',
 		drag: function (event, ui) {
-			ui.position.left = Math.min(100, ui.position.left);
-			line.css('right', 82 - ui.position.left);
-			if (ui.position.left < (-400)) {
-				circle.animate({'left': -524}, 300);
-				circle.unbind();
-				line.animate({'right': 524}, 150);
-				return false;
+			line.css('left', 82 + ui.position.left);
+			if (ui.position.left > 420) {
+				if (!ind) {
+					circle.animate({'left': 524}, 200);
+					line.animate({'left': 524}, 200, function () {
+						console.log('next slide');
+						ind = false;
+					});
+				}
+				ind = true;
+				}
 			}
-		}
 	});
 })();
 
@@ -337,7 +341,6 @@
 		max: 33,
 		value: 2,
 		change: function (event, ui) {
-			console.log(ui.value);
 			if (ui.value < 8) {
 				rangeIndex = 1;
 				slider.slick('slickGoTo', '0', false);

@@ -1,0 +1,46 @@
+$array1: 20 -28 -39 0 35 -54 -85 210 182 140 120 -146 -203 -222
+
+@each $value in $array1
+	$i: index($array1, $value)
+	@keyframes anim-#{$i}
+		0%
+			transform: rotate(#{$value}deg) skewX(0deg) skewY(0deg) translateX(0) translateY(0)
+		100%
+			transform: rotate(#{$value}deg) skewX(10deg) skewY(10deg) translateX(7%) translateY(-7%)
+			
+$array2: -73 -109 0 -158 5 -190 -225 -245 99
+
+@each $value in $array2
+	$i: index($array2, $value)
+	@keyframes anim2-#{$i + 14}
+		0%
+			transform: rotate(#{$value}deg) skewX(0deg) skewY(0deg) translateX(-0) translateY(0)
+		100%
+			transform: rotate(#{$value}deg) skewX(10deg) skewY(5deg) translateX(-7%) translateY(7%)
+			
+$array3: 58 186 0 -72 -60 -80 150
+@each $value in $array3
+	$i: index($array3, $value)
+	@keyframes anim3-#{$i + 23}
+		0%
+			transform: rotate(#{$value}deg) skewX(0deg) skewY(0deg) translateX(0)
+		100%
+			transform: rotate(#{$value}deg) skewX(10deg) skewY(10deg) translateX(10%)
+
+$array4: 0 -2 15 45
+@each $value in $array4
+	$i: index($array4, $value)
+	@keyframes anim4-#{$i + 30}
+		0%
+			transform: rotate(#{$value}deg) skewX(0deg) skewY(0deg) translateY(0)
+		100%
+			transform: rotate(#{$value}deg) skewX(4deg) skewY(7deg) translateY(7%)
+			
+$array5: -53 0 54 130 132 131
+@each $value in $array5
+	$i: index($array5, $value)
+	@keyframes anim5-#{$i + 34}
+		0%
+			transform: rotate(#{$value}deg) skewX(0deg) skewY(0deg) translateY(0)
+		100%
+			transform: rotate(#{$value}deg) skewX(4deg) skewY(7deg) translateY(15%)

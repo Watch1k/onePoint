@@ -159,9 +159,9 @@ if (!window.requestAnimationFrame) {
 		};
 
 		this.bind = function () {
-			$canvas.on('mousemove', function(e){
-				config.position.x = e.pageX - $canvas.offset().left;
-				config.position.y = e.pageY - $canvas.offset().top;
+			$canvas.on('touchmove', function(e){
+				config.position.x = e.originalEvent.touches[0].pageX - $canvas.offset().left;
+				config.position.y = e.originalEvent.touches[0].pageY - $canvas.offset().top;
 			});
 		};
 
