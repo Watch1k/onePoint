@@ -241,7 +241,7 @@ var syncOptions = {
         directory: true
         // index: 'index.html'
     },
-    // files: [dest.html + '/*.html', dest.css + '/*.css', dest.js + '/*.js'],
+    files: [dest.css + '/*.css', dest.js + '/*.js'],
     port: 8080,
     notify: false,
     ghostMode: false,

@@ -32,6 +32,8 @@ body
 	line-height: 1.42857
 
 .wrapper
+	position: relative
+	z-index: 5
 	overflow: hidden
 	margin: 0 auto
 	height: 100%
@@ -53,6 +55,16 @@ body
 
 /* Helpers
 	----------------------------------- */
+.canvas
+	position: absolute
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	z-index: 1
+	
 *
 	user-select: none
 	//transform-style: preserve-3d
@@ -129,6 +141,7 @@ img
 		
 .plus-btn
 	position: relative
+	z-index: 10
 	width: 46px
 	height: 46px
 	border-radius: 50%
@@ -345,6 +358,223 @@ img
 		&.is-active
 			display: block
 		
+
+/* ===================================
+	 #3
+	 =================================== */
+.s3
+	&__wrapper
+		pointer-events: none
+	&__row
+		*
+			pointer-events: auto
+	&__tooltip
+		pointer-events: none
+		opacity: 0
+		position: fixed
+		z-index: 4
+		padding: 25px 15px 20px
+		top: 10%
+		left: 10%
+		background-color: #ffffff
+		box-shadow: 0 5px 14px 0 rgba(86, 161, 233, 0.31)
+		&.animated
+			opacity: 1
+		&:before
+			content: ''
+			position: absolute
+			z-index: 2
+			left: -18px
+			top: 50%
+			margin-top: -15px
+			+arr(20,30,#ffffff,l)
+		&:after
+			content: ''
+			position: absolute
+			z-index: 1
+			left: -23px
+			top: 50%
+			margin-top: -16px
+			+arr(22,32,rgba(86, 161, 233, 0.1),l)
+	&__btn
+		&-1
+			position: absolute
+			top: 15%
+			left: 20%
+		&-2
+			position: absolute
+			top: 30%
+			left: 50%
+		&-3
+			position: absolute
+			top: 65%
+			left: 80%
+		&-4
+			position: absolute
+			top: 10%
+			left: 15%
+		&-5
+			position: absolute
+			top: 70%
+			left: 35%
+		&-6
+			position: absolute
+			top: 75%
+			left: 85%
+		&-7
+			position: absolute
+			top: 10%
+			left: 15%
+		&-8
+			position: absolute
+			top: 15%
+			left: 75%
+		&-9
+			position: absolute
+			top: 65%
+			left: 25%
+		&-10
+			position: absolute
+			top: 35%
+			left: 40%
+		&-11
+			position: absolute
+			top: 60%
+			left: 60%
+		&-12
+			position: absolute
+			top: 75%
+			left: 7%
+		&-13
+			position: absolute
+			top: 35%
+			left: 20%
+		&-14
+			position: absolute
+			top: 25%
+			left: 80%
+		&-15
+			position: absolute
+			top: 75%
+			left: 10%
+		&-16
+			position: absolute
+			top: 65%
+			left: 70%
+		&-17
+			position: absolute
+			top: 25%
+			left: 80%
+		&-18
+			position: absolute
+			top: 75%
+			left: 10%
+	&__canvas
+		position: absolute
+		top: 0
+		left: 50%
+		right: -50%
+		bottom: 0
+		z-index: -1
+	&__row
+		+pie-clearfix
+	&__container
+		display: table
+		width: 100%
+	&__col
+		position: relative
+		float: left
+		width: 43%
+		text-align: left
+		height: 100vh
+		+vertical
+		text-align: left
+		& + &
+			height: auto
+			text-align: center
+	&__for
+		height: 100%
+	&__for-text
+		display: inline-block
+		vertical-align: middle
+	&__nav
+		position: fixed
+		z-index: 3
+		top: 50%
+		transform: translateY(-50%)
+		right: 80px
+		font-size: 12px
+		color: #c0c0c0
+		line-height: 25px
+		display: inline-block
+		vertical-align: middle
+		&-icon
+			position: relative
+			float: right
+			width: 25px
+			height: 25px
+			border-radius: 50%
+			border: 7px solid #ffffff
+			background-color: #c0c0c0
+		&-text
+			float: right
+			margin-right: 8px
+	&__arrows
+		position: absolute
+		z-index: 3
+		pointer-events: none
+		top: 0
+		bottom: 0
+		right: 0
+	&__prev
+		pointer-events: auto
+		position: fixed
+		z-index: 3
+		top: 27%
+		right: 83px
+		color: #adadad
+		opacity: 0.7
+	&__next
+		pointer-events: auto
+		position: fixed
+		z-index: 3
+		bottom: 27%
+		right: 83px
+		color: #adadad
+		opacity: 0.7
+	.slick-slide
+		position: relative
+		height: 100vh
+		+vertical
+		img
+			display: inline-block
+			vertical-align: middle
+	.slick-dots
+		position: relative
+		li
+			+pie-clearfix
+			+ li
+				margin-top: 20px
+				.s3__nav-icon
+					position: relative
+					&:before
+						content: ''
+						position: absolute
+						z-index: -1
+						left: 50%
+						margin-left: -2px
+						margin-bottom: 7px
+						bottom: 100%
+						height: 20px
+						width: 3px
+						background-color: #c0c0c0
+			&.slick-active
+				.s3__nav-icon
+					background-color: #ffffff
+					border: solid 7px #00a2f4
+				.s3__nav-text
+					color: #00a2f4
+		
 		
 /* ===================================
 	 #4
@@ -481,6 +711,151 @@ img
 		transform: scale(0.1)
 		transition: all 0.2s
 		
+
+/* ===================================
+	 #6
+	 =================================== */
+.s6
+	&__title
+		position: absolute
+		z-index: -1
+		left: 80px
+		top: 15%
+	&__wrapper-in
+		height: 100%
+	&__slider
+		width: 80%
+		&-item
+			height: 100vh !important
+		&-img
+			margin-top: 35%
+	.ui-slider
+		position: fixed
+		z-index: 7
+		right: 80px
+		top: 50%
+		height: 454px
+		width: 18px
+		background-color: #c5ced7
+		border-radius: 14px
+		border: solid 2px #ffffff
+		box-shadow: 0 0 2px 0 rgba(173, 173, 173, 0.5)
+		transform: translateY(-50%)
+		&:before
+			content: ''
+			position: absolute
+			left: -50px
+			top: 0px
+			height: 450px
+			width: 29px
+			background: url(img/6/mark.png) center center no-repeat
+			background-size: 29px 450px
+	.ui-slider-range
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		border-radius: 14px
+		background: linear-gradient(to bottom, #09bdff, #3372e3)
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: -50px
+			width: 29px
+			bottom: 0
+			background: url(img/6/mark2.png) bottom center no-repeat
+			background-size: 29px 450px
+	.ui-slider-handle
+		position: absolute
+		left: -35px
+		bottom: 0
+		height: 142px
+		width: 85px
+		background: url(img/6/button.png) center center no-repeat
+		background-size: 100%
+		touch-action: none
+		transform: translateY(50%)
+			
+
+/* ===================================
+	 #7
+	 =================================== */
+.s7
+	&__title
+		margin-top: -150px
+	&__box
+		margin-top: 50px
+		padding: 34px 24px
+		background-color: #ffffff
+		box-shadow: 0 12px 29px 0 rgba(71, 175, 255, 0.36)
+		transition: all 0.2s
+		&:active
+			transform: scale(0.82)
+	&__tab
+		overflow: hidden
+		position: absolute
+		z-index: 1
+		left: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		background: url('../img/7/bg.png') center center no-repeat
+		background-size: cover
+		+vertical
+		text-align: left
+		transition: all 1s ease-in-out
+		transform: translateX(100%) translateZ(0)
+		&.is-active
+			transform: translateX(0) translateZ(0)
+		&-img
+			position: relative
+			top: 145px
+			left: 80px
+		&-text
+			position: absolute
+			z-index: 2
+			top: 380px
+			right: 170px
+	&__back
+		position: absolute
+		z-index: 100
+		bottom: 40px
+		left: 50%
+		margin-left: -57px
+		padding: 9px 24px 10px
+		font-size: 14px
+		color: rgba(255, 255, 255, .88)
+		letter-spacing: -0.1px
+		line-height: 14px
+		border-radius: 55px
+		border: 1px solid rgba(255, 255, 255, .88)
+		transition: all 0.2s
+		&:active
+			transform: scale(0.82)
+	&__pulse
+		position: absolute
+		right: 0
+		width: 720px
+		top: 0
+		bottom: 0
+		
+.pulse
+	&__icon
+		position: absolute
+		left: 0
+		top: 0
+		opacity: 0.8
+		color: #d8d8d8
+		.icon
+			font-size: inherit
+	&-1
+		&__in
+			&:nth-child(1)
+				left: 25%
+				top: 10%
+				transform: rotate(-35deg)
+				
 
 /* ===================================
 	 #8
@@ -867,6 +1242,63 @@ img
 	background: url('img/13/1.png') center center no-repeat
 	background-size: cover
 	
+
+/* ===================================
+	 #14
+	 =================================== */
+.s14
+	background: url('img/14/1.png') center center no-repeat
+	background-size: cover
+	&__send
+		position: absolute
+		top: 40%
+		right: 280px
+		&-text
+			margin-top: 40px
+			+roboto
+			font-size: 20px
+			color: rgba(255, 255, 255, .38)
+	&__btn
+		position: relative
+		width: 143px
+		height: 143px
+		background-color: #ffffff
+		border-radius: 50%
+		box-shadow: 0 11px 42px 0 rgba(55, 137, 243, 0.77), 0 5px 87px 0 rgba(255, 255, 255, 0.39)
+		+vertical
+		transition: all 0.2s
+		.icon
+			position: relative
+			z-index: 2
+			font-size: 48px
+			color: #3390fc
+		&:active
+			transform: scale(0.82)
+		&-in
+			+ratio-in
+			z-index: 1
+			opacity: 0
+			background-color: rgba(255, 255, 255, .15)
+			border-radius: 50%
+			animation: s14-pulse 6s infinite
+			& + &
+				animation-delay: 1s
+			& + & + &
+				animation-delay: 2s
+			& + & + & + &
+				animation-delay: 3s
+			& + & + & + & + &
+				animation-delay: 4s
+			& + & + & + & + & + &
+				animation-delay: 5s
+		
+@keyframes s14-pulse
+	0%
+		opacity: 1
+		transform: scale(1)
+	100%
+		opacity: 0
+		transform: scale(1.75)
 	
 
 /* ===================================
