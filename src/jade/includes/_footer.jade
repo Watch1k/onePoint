@@ -1,0 +1,11 @@
+block counterValue
+	-var counterValue = ''
+
+.footer.js-footer
+	.footer__info.js-info
+		+i('instruction')
+		block tooltip
+			.footer__info-tooltip Для детальной информации об источнике аналитики нажмите на иконку
+	.footer__counter
+		.footer__counter-left Слайд:
+		.footer__counter-right= counterValue + ' из 20'

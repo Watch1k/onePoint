@@ -2,7 +2,7 @@ extend includes/_layout
 block title
 	title 2
 block body
-	body.s2
+	body.s2(data-next-slide='three')
 		.wrapper
 			.wrapper__in
 				img(src='img/2/instruction.png')
@@ -19,7 +19,7 @@ block body
 					img.s2__img(src='img/2/slide-2.png')
 				.s2__tab.js-tab(data-index='3')
 					img.s2__img(src='img/2/slide-3.png')
-				.s2__btn
+				.s2__btn.js-2-btn
 					.btn Продолжить
 	block js
 		script(src="app.js")

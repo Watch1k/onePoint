@@ -1,8 +1,13 @@
 extend includes/_layout
+block counterValue
+	-var counterValue = '8'
+block tooltip
 block title
 	title 10
 block body
 	body.s10
+		include includes/_tutorial
+		include includes/_header
 		.wrapper
 			.wrapper__in.text-left
 				.s10__nav-wrap
@@ -52,5 +57,6 @@ block body
 						img.s10__img.s10__img_margin(src='img/10/3.png' srcset='img/10/3@2x.png 2x')
 					.s10__col.s10__col_3.rel.text-center
 						img.s10__img.s10__img_3(src='img/10/3-0.png' srcset='img/10/3-0@2x.png 2x')
+		include includes/_footer
 	block js
 		script(src="app.js")

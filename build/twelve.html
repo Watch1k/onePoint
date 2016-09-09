@@ -12,6 +12,29 @@
 </head>
 
 <body class="s12">
+  <div class="tutorial js-tutorial">
+    <div class="tutorial__in"><img src="img/2/instruction.png">
+      <div class="s2__nav js-nav">
+        <div class="s2__nav-link is-active">
+          <div class="s2__nav-link-text">Навигация</div>
+        </div>
+        <div class="s2__nav-link">
+          <div class="s2__nav-link-text">Контент</div>
+        </div>
+        <div class="s2__nav-link">
+          <div class="s2__nav-link-text">Подсказки</div>
+        </div>
+      </div>
+      <div data-index="1" class="s2__tab is-active js-tab"><img src="img/2/slide-1.png" class="s2__img"></div>
+      <div data-index="2" class="s2__tab js-tab"><img src="img/2/slide-2.png" class="s2__img"></div>
+      <div data-index="3" class="s2__tab js-tab"><img src="img/2/slide-3.png" class="s2__img"></div>
+    </div>
+  </div>
+  <div class="header js-header">
+    <div class="header__logo js-logo"><svg class="icon icon-logo"><use xlink:href="img/sprite.svg#icon-logo"></use></svg></div>
+    <div class="header__back js-tutorial-back"><svg class="icon icon-tutorial-back"><use xlink:href="img/sprite.svg#icon-tutorial-back"></use></svg></div>
+    <div class="header__instruction js-instruction"><svg class="icon icon-settings"><use xlink:href="img/sprite.svg#icon-settings"></use></svg></div>
+  </div>
   <div class="wrapper">
     <div class="s12__in wrapper__in"><img src="img/12/title.png" srcset="img/12/title@2x.png 2x" class="s12__title">
       <ul class="s12__slider js-12-slider">
@@ -33,6 +56,13 @@
       <div class="s12__nav-item"></div>
     </div>
   </div>
+  </div>
+  <div class="footer js-footer">
+    <div class="footer__info js-info"><svg class="icon icon-instruction"><use xlink:href="img/sprite.svg#icon-instruction"></use></svg></div>
+    <div class="footer__counter">
+      <div class="footer__counter-left">Слайд:</div>
+      <div class="footer__counter-right">10 из 20</div>
+    </div>
   </div>
 </body>
 <script src="app.js"></script>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="285px" height="16px" viewBox="0 0 285 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39 (31667) - http://www.bohemiancoding.com/sketch -->
+    <title>tutorial-back</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="18-восемнадцать-2" transform="translate(-81.000000, -51.000000)">
+            <g id="tutorial-back" transform="translate(82.000000, 48.000000)">
+                <g transform="translate(0.000000, 4.000000)" id="Line" stroke="#7E8C9B" stroke-width="2" stroke-linecap="square">
+                    <path d="M2.5,7 L25.4863281,7"></path>
+                    <path d="M1,13 L7,7" transform="translate(4.000000, 10.000000) scale(1, -1) translate(-4.000000, -10.000000) "></path>
+                    <path d="M1,7 L7,1"></path>
+                </g>
+                <text id="Вернуться-к-просмотр" font-family="Roboto-Regular, Roboto" font-size="14" font-weight="normal" fill="#7E8C9B">
+                    <tspan x="41" y="15">Вернуться к просмотру презентации</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

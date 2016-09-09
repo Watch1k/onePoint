@@ -1,8 +1,13 @@
 extend includes/_layout
+block counterValue
+	-var counterValue = '2'
+block tooltip
 block title
 	title 4
 block body
 	body.s4
+		include includes/_tutorial
+		include includes/_header
 		.wrapper
 			.wrapper__in
 				.text-left
@@ -10,5 +15,6 @@ block body
 				.s4__controls.text-left
 					.s4__btn.btn.btn_blue ПЕРВЫЙ ВИЗИТ
 					.s4__btn.btn.btn_blue ВТОРОЙ ВИЗИТ
+		include includes/_footer
 	block js
 		script(src="app.js")

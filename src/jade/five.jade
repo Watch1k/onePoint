@@ -1,8 +1,13 @@
 extend includes/_layout
+block counterValue
+	-var counterValue = '3'
+block tooltip
 block title
 	title 5
 block body
 	body.s5
+		include includes/_tutorial
+		include includes/_header
 		.wrapper
 			.wrapper__in
 				.text-center
@@ -45,5 +50,6 @@ block body
 									.s5__radios-row.row
 										input.radio(name='s5radio' type='radio' id='radio4')
 										label.radio-label(for='radio4') 300-400
+		include includes/_footer
 	block js
 		script(src="app.js")

@@ -1,8 +1,13 @@
 extend includes/_layout
+block counterValue
+	-var counterValue = '10'
+block tooltip
 block title
 	title 12
 block body
 	body.s12
+		include includes/_tutorial
+		include includes/_header
 		.wrapper
 			.s12__in.wrapper__in
 				img.s12__title(src='img/12/title.png' srcset='img/12/title@2x.png 2x')
@@ -34,5 +39,6 @@ block body
 					.s12__nav-item.is-active
 					.s12__nav-item
 					.s12__nav-item
+		include includes/_footer
 	block js
 		script(src="app.js")

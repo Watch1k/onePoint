@@ -1,8 +1,13 @@
 extend includes/_layout
+block counterValue
+	-var counterValue = '5'
+block tooltip
 block title
 	title 7
 block body
 	body.s7
+		include includes/_tutorial
+		include includes/_header
 		.s7__wrapper.wrapper
 			.wrapper__in
 				.s7__nav.js-7-nav
@@ -22,7 +27,7 @@ block body
 					img.s7__tab-text(src='img/7/text-1.png' srcset='img/7/text-1@2x.png 2x')
 					.s7__back.js-7-back Сменить портрет
 					//begin pulse
-					.s7__pulse.pulse
+					.s7__pulse.pulse.js-7-pulse
 						.pulse__icon
 							+i('pulse-1-original')
 						.pulse__icon
@@ -109,7 +114,7 @@ block body
 					img.s7__tab-text(src='img/7/text-2.png' srcset='img/7/text-2@2x.png 2x')
 					.s7__back.js-7-back Сменить портрет
 					//begin pulse
-					.s7__pulse.pulse
+					.s7__pulse.pulse.js-7-pulse
 						.pulse__icon
 							+i('pulse-1-original')
 						.pulse__icon
@@ -191,5 +196,6 @@ block body
 						.pulse__icon
 							+i('pulse-5-original')
 					//end pulse
+		include includes/_footer
 	block js
 		script(src="app.js")

@@ -1,8 +1,13 @@
 extend includes/_layout
+block counterValue
+	-var counterValue = '4'
+block tooltip
 block title
 	title 6
 block body
 	body.s6
+		include includes/_tutorial
+		include includes/_header
 		.wrapper
 			.s6__wrapper-in.wrapper__in
 				img.s6__title.js-6-title(src='img/6/title.png' srcset='img/6/title@2x.png 2x')
@@ -20,5 +25,6 @@ block body
 					.s6__slider-item
 						img.s6__slider-img(src='img/6/6.png' srcset='img/6/6@2x.png 2x')
 				.s6__range.js-6-range
+		include includes/_footer
 	block js
 		script(src="app.js")

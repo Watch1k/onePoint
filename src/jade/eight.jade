@@ -1,8 +1,13 @@
 extend includes/_layout
+block counterValue
+	-var counterValue = '6'
+block tooltip
 block title
 	title 8
 block body
 	body.s8
+		include includes/_tutorial
+		include includes/_header
 		.wrapper
 			.rel.wrapper__in
 				.s8__plus-btn.plus-btn.js-plus-btn.js-8-btn
@@ -14,5 +19,6 @@ block body
 					.s8__col.rel
 						img.s8__wallet(src='img/8/wallet.png')
 						img.s8__money.animated.js-8-money(src='img/8/money.png')
+		include includes/_footer
 	block js
 		script(src="app.js")

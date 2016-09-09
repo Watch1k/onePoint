@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="147px" height="43px" viewBox="0 0 147 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39 (31667) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="25.8331694 26.6336648 25.8331694 0.0245803184 2.5277012e-05 0.0245803184 2.5277012e-05 26.6336648 25.8331694 26.6336648"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="11-одинадцатый" transform="translate(-81.000000, -38.000000)">
+            <g id="Основа" transform="translate(81.000000, 36.000000)">
+                <g id="Group-2" transform="translate(0.000000, 2.000000)">
+                    <g id="logo-nullgr" transform="translate(30.654255, 8.972222)" font-size="23" font-family="Arial-BoldMT, Arial" line-spacing="17.4" font-weight="bold">
+                        <text id="nullgravity">
+                            <tspan x="0" y="21">nullgravity</tspan>
+                        </text>
+                    </g>
+                    <g id="Page-1">
+                        <g id="Group-3" transform="translate(0.000000, 0.037648)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-2"></g>
+                            <path d="M18.098429,0.572180029 L18.098429,4.95307728 L17.9972578,4.95307728 C16.5311911,2.26479942 13.851891,0.0245678726 9.20085761,0.0245678726 C2.67938854,0.0245678726 2.5277012e-05,3.36002373 2.5277012e-05,9.93143184 L2.5277012e-05,26.6336648 L8.03811507,26.6336648 L8.03811507,11.6738342 C8.03811507,9.78202084 8.13922311,8.23881245 8.84697945,7.24315398 C9.605353,6.19765036 10.8185864,5.69982113 12.3352071,5.69982113 C15.924606,5.69982113 17.7950417,7.94005268 17.7950417,11.8231829 L17.7950417,26.6336648 L25.8331946,26.6336648 L25.8331946,0.572180029 L18.098429,0.572180029 Z" id="Fill-1" mask="url(#mask-2)"></path>
+                        </g>
+                        <path d="M17.7950164,31.3262032 C17.7950164,36.0555809 15.9490362,37.7979832 12.9291284,37.7979832 C9.96261828,37.7979832 8.54363003,36.6530382 8.03808979,34.6617213 L0,34.6617213 C0.404432191,39.6897343 5.07770935,42.9754072 12.8280204,42.9754072 C21.6002178,42.9754072 25.8331694,38.9927734 25.8331694,30.9279398 L25.8331694,28.9859702 L17.7950164,28.9859702 L17.7950164,31.3262032 Z" id="Fill-4"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

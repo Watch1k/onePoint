@@ -1,8 +1,13 @@
 extend includes/_layout
+block counterValue
+	-var counterValue = '1'
+block tooltip
 block title
 	title 3
 block body
-	body.s3
+	body.s3(data-next-slide='four' data-prev-slide='fourteen')
+		include includes/_tutorial
+		include includes/_header
 		.s3__tooltip.tooltip.js-3-tooltip(data-index='1')
 			img.tooltip__img(src='img/3/1.png')
 		.s3__tooltip.tooltip.js-3-tooltip(data-index='2')
@@ -54,21 +59,21 @@ block body
 								.plus-btn__text.plus-btn__text_plus
 							.s3__btn-2.plus-btn.js-plus-btn.js-3-btn(data-index='2')
 								.plus-btn__text.plus-btn__text_plus
-							.s3__btn-3.plus-btn.js-plus-btn.js-3-btn(data-index='3')
+							.s3__btn-3.plus-btn.is-left.js-plus-btn.js-3-btn(data-index='3')
 								.plus-btn__text.plus-btn__text_plus
 						.s3__for-item
 							img.s3__for-logo(src='img/3/logo-2.png' srcset='img/3/logo-2@2x.png 2x')
 							.s3__btn-4.plus-btn.js-plus-btn.js-3-btn(data-index='4')
 								.plus-btn__text.plus-btn__text_plus
-							.s3__btn-5.plus-btn.js-plus-btn.js-3-btn(data-index='5')
+							.s3__btn-5.plus-btn.is-left.js-plus-btn.js-3-btn(data-index='5')
 								.plus-btn__text.plus-btn__text_plus
-							.s3__btn-6.plus-btn.js-plus-btn.js-3-btn(data-index='6')
+							.s3__btn-6.plus-btn.is-left.js-plus-btn.js-3-btn(data-index='6')
 								.plus-btn__text.plus-btn__text_plus
 						.s3__for-item
 							img.s3__for-logo(src='img/3/logo-3.png' srcset='img/3/logo-3@2x.png 2x')
 							.s3__btn-7.plus-btn.js-plus-btn.js-3-btn(data-index='7')
 								.plus-btn__text.plus-btn__text_plus
-							.s3__btn-8.plus-btn.js-plus-btn.js-3-btn(data-index='8')
+							.s3__btn-8.plus-btn.is-left.js-plus-btn.js-3-btn(data-index='8')
 								.plus-btn__text.plus-btn__text_plus
 							.s3__btn-9.plus-btn.js-plus-btn.js-3-btn(data-index='9')
 								.plus-btn__text.plus-btn__text_plus
@@ -76,7 +81,7 @@ block body
 							img.s3__for-logo(src='img/3/logo-4.png' srcset='img/3/logo-4@2x.png 2x')
 							.s3__btn-10.plus-btn.js-plus-btn.js-3-btn(data-index='10')
 								.plus-btn__text.plus-btn__text_plus
-							.s3__btn-11.plus-btn.js-plus-btn.js-3-btn(data-index='11')
+							.s3__btn-11.plus-btn.is-left.js-plus-btn.js-3-btn(data-index='11')
 								.plus-btn__text.plus-btn__text_plus
 							.s3__btn-12.plus-btn.js-plus-btn.js-3-btn(data-index='12')
 								.plus-btn__text.plus-btn__text_plus
@@ -84,17 +89,18 @@ block body
 							img.s3__for-logo(src='img/3/logo-5.png' srcset='img/3/logo-5@2x.png 2x')
 							.s3__btn-13.plus-btn.js-plus-btn.js-3-btn(data-index='13')
 								.plus-btn__text.plus-btn__text_plus
-							.s3__btn-14.plus-btn.js-plus-btn.js-3-btn(data-index='14')
+							.s3__btn-14.plus-btn.is-left.js-plus-btn.js-3-btn(data-index='14')
 								.plus-btn__text.plus-btn__text_plus
 							.s3__btn-15.plus-btn.js-plus-btn.js-3-btn(data-index='15')
 								.plus-btn__text.plus-btn__text_plus
-							.s3__btn-16.plus-btn.js-plus-btn.js-3-btn(data-index='16')
+							.s3__btn-16.plus-btn.is-left.js-plus-btn.js-3-btn(data-index='16')
 								.plus-btn__text.plus-btn__text_plus
 						.s3__for-item
 							img.s3__for-logo(src='img/3/logo-6.png' srcset='img/3/logo-6@2x.png 2x')
-							.s3__btn-17.plus-btn.js-plus-btn.js-3-btn(data-index='17')
+							.s3__btn-17.plus-btn.is-left.js-plus-btn.js-3-btn(data-index='17')
 								.plus-btn__text.plus-btn__text_plus
 							.s3__btn-18.plus-btn.js-plus-btn.js-3-btn(data-index='18')
 								.plus-btn__text.plus-btn__text_plus
+		include includes/_footer
 	block js
 		script(src="app.js")

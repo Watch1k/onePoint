@@ -24,6 +24,7 @@ $default-fonts: Arial, sans-serif
 	 Main Styles
 	 =================================== */
 body
+	position: relative
 	overflow: hidden
 	min-width: 320px
 	+roboto
@@ -224,16 +225,119 @@ img
 /* ===================================
 	 Header
 	 =================================== */
-//.header
+.header
+	pointer-events: none
+	position: absolute
+	z-index: 21
+	top: 0
+	left: 0
+	right: 0
+	padding: 30px 80px 0
+	+pie-clearfix
+	&__logo
+		float: left
+		font-size: 0
+		.icon
+			font-size: 43px
+			color: #192944
+			transition: all 1s
+	&.is-white &__logo
+		.icon
+			color: #ffffff
+	&__instruction
+		pointer-events: auto
+		float: right
+		font-size: 0
+		.icon
+			font-size: 40px
+			color: rgba(126, 140, 155, .52)
+			transition: all 1s
+	&.is-white &__instruction
+		.icon
+			color: #ffffff
+	&__back
+		display: none
+		pointer-events: auto
+		position: fixed
+		z-index: 1
+		top: 35px
+		left: 70px
+		padding: 10px
+		font-size: 0
+		.icon
+			font-size: 16px
+	
 
 
 /* ===================================
 	 Footer
 	 =================================== */
-//.footer
-	margin-top: -40px
-	height: 40px
-
+.footer
+	pointer-events: none
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 0 80px 40px
+	z-index: 20
+	+pie-clearfix
+	&__info
+		pointer-events: auto
+		position: relative
+		float: left
+		width: 36px
+		height: 36px
+		border-radius: 100%
+		border: 2px solid rgba(22, 42, 69, .54)
+		+vertical
+		transition: all 1s
+		.icon
+			font-size: 21px
+			color: rgba(22, 42, 69, .54)
+			transition: all 1s
+		&-tooltip
+			pointer-events: none
+			position: absolute
+			top: 50%
+			left: 100%
+			margin-top: -24px
+			margin-left: 20px
+			padding: 10px 20px
+			width: 300px
+			font-size: 12px
+			color: rgba(255, 255, 255, .8)
+			line-height: 14px
+			text-align: left
+			border-radius: 3px
+			background-color: #1f86d2
+			box-shadow: 0 5px 14px 0 rgba(86, 161, 233, 0.31)
+			&:before
+				content: ''
+				position: absolute
+				left: -11px
+				top: 50%
+				margin-top: -10px
+				+arr(11,21,#1f86d2,l)
+	&.is-white &__info
+		border-color: #ffffff
+		.icon
+			color: #ffffff
+	&__counter
+		float: right
+		font-size: 17px
+		color: #9d9d9d
+		line-height: 36px
+		transition: all 1s
+		+pie-clearfix
+		&-left
+			float: left
+			margin-right: 10px
+		&-right
+			float: right
+	&.is-white &__counter
+		color: #ffffff
+		
+	
 
 /* ===================================
 	 Main
@@ -314,6 +418,10 @@ img
 		right: 0
 		margin-left: auto
 		margin-right: auto
+		transform: scale(1)
+		transition: all 0.2s
+		&:active
+			transform: scale(0.82)
 	&__nav
 		margin: 40px 50px 75px
 		font-size: 18px
@@ -376,9 +484,9 @@ img
 		opacity: 0
 		position: fixed
 		z-index: 4
-		padding: 25px 15px 20px
-		top: 10%
-		left: 10%
+		padding: 20px 15px 17px
+		top: -1000%
+		left: -1000%
 		background-color: #ffffff
 		box-shadow: 0 5px 14px 0 rgba(86, 161, 233, 0.31)
 		&.animated
@@ -399,6 +507,15 @@ img
 			top: 50%
 			margin-top: -16px
 			+arr(22,32,rgba(86, 161, 233, 0.1),l)
+		&.is-left
+			&:before
+				left: auto
+				right: -18px
+				+arr(20,30,#ffffff,r)
+			&:after
+				left: auto
+				right: -23px
+				+arr(22,32,rgba(86, 161, 233, 0.1),r)
 	&__btn
 		&-1
 			position: absolute
@@ -414,15 +531,15 @@ img
 			left: 80%
 		&-4
 			position: absolute
-			top: 10%
+			top: 13%
 			left: 15%
 		&-5
 			position: absolute
-			top: 70%
-			left: 35%
+			top: 66.5%
+			left: 30%
 		&-6
 			position: absolute
-			top: 75%
+			top: 81.5%
 			left: 85%
 		&-7
 			position: absolute
@@ -430,8 +547,8 @@ img
 			left: 15%
 		&-8
 			position: absolute
-			top: 15%
-			left: 75%
+			top: 25%
+			left: 77%
 		&-9
 			position: absolute
 			top: 65%
@@ -442,11 +559,11 @@ img
 			left: 40%
 		&-11
 			position: absolute
-			top: 60%
+			top: 61%
 			left: 60%
 		&-12
 			position: absolute
-			top: 75%
+			top: 78%
 			left: 7%
 		&-13
 			position: absolute
@@ -454,15 +571,15 @@ img
 			left: 20%
 		&-14
 			position: absolute
-			top: 25%
+			top: 20%
 			left: 80%
 		&-15
 			position: absolute
-			top: 75%
+			top: 78%
 			left: 10%
 		&-16
 			position: absolute
-			top: 65%
+			top: 62%
 			left: 70%
 		&-17
 			position: absolute
@@ -723,7 +840,7 @@ img
 		position: absolute
 		z-index: -1
 		left: 80px
-		top: 15%
+		top: 20%
 	&__wrapper-in
 		height: 100%
 	&__slider
@@ -731,7 +848,7 @@ img
 		&-item
 			height: 100vh !important
 		&-img
-			margin-top: 35%
+			margin-top: 32%
 	.ui-slider
 		position: fixed
 		z-index: 7
@@ -799,18 +916,20 @@ img
 		overflow: hidden
 		position: absolute
 		z-index: 1
-		left: 0
-		bottom: 0
+		top: 0
+		right: 0
 		width: 100%
 		height: 100%
 		background: url('../img/7/bg.png') center center no-repeat
 		background-size: cover
 		+vertical
 		text-align: left
+		transform: translate3d(100%,0,0)
 		transition: all 1s ease-in-out
-		transform: translateX(100%) translateZ(0)
+		*
+			transform: translate3d(0,0,0)
 		&.is-active
-			transform: translateX(0) translateZ(0)
+			transform: translate3d(0,0,0)
 		&-img
 			position: relative
 			top: 145px
@@ -844,6 +963,8 @@ img
 		bottom: 0
 		
 .pulse
+	display: none
+	pointer-events: none
 	&__icon
 		position: absolute
 		left: 0
@@ -853,6 +974,7 @@ img
 		animation-duration: 0.75s
 		animation-iteration-count: infinite
 		animation-direction: alternate
+		transform-style: preserve-3d
 		.icon
 			font-size: inherit
 		//element 1
@@ -863,6 +985,7 @@ img
 			font-size: 120px
 			animation-name: anim-1
 			animation-delay: 0.00s
+			transform: rotate(20deg)
 		&:nth-child(2)
 			top: 32px
 			left: 224px
@@ -870,6 +993,7 @@ img
 			font-size: 65px
 			animation-name: anim-2
 			animation-delay: 0.05s
+			transform: rotate(-28deg)
 		&:nth-child(3)
 			top: 82px
 			left: 22px
@@ -877,6 +1001,7 @@ img
 			font-size: 97px
 			animation-name: anim-3
 			animation-delay: 0.30s
+			transform: rotate(-39deg)
 		&:nth-child(4)
 			top: 187px
 			left: 367px
@@ -884,6 +1009,7 @@ img
 			font-size: 65px
 			animation-name: anim-4
 			animation-delay: 0.75s
+			transform: rotate(0deg)
 		&:nth-child(5)
 			top: 224px
 			left: 560px
@@ -891,6 +1017,7 @@ img
 			font-size: 65px
 			animation-name: anim-5
 			animation-delay: 0.50s
+			transform: rotate(35deg)
 		&:nth-child(6)
 			top: 263px
 			left: 53px
@@ -898,6 +1025,7 @@ img
 			font-size: 49px
 			animation-name: anim-6
 			animation-delay: 0.85s
+			transform: rotate(-54deg)
 		&:nth-child(7)
 			top: 365px
 			left: 67px
@@ -905,6 +1033,7 @@ img
 			font-size: 65px
 			animation-name: anim-7
 			animation-delay: 0.30s
+			transform: rotate(-85deg)
 		&:nth-child(8)
 			top: 502px
 			left: 102px
@@ -912,6 +1041,7 @@ img
 			font-size: 53px
 			animation-name: anim-8
 			animation-delay: 0.55s
+			transform: rotate(210deg)
 		&:nth-child(9)
 			top: 482px
 			left: 305px
@@ -919,6 +1049,7 @@ img
 			font-size: 49px
 			animation-name: anim-9
 			animation-delay: 0.10s
+			transform: rotate(182deg)
 		&:nth-child(10)
 			top: 490px
 			left: 455px
@@ -926,6 +1057,7 @@ img
 			font-size: 65px
 			animation-name: anim-10
 			animation-delay: 0.45s
+			transform: rotate(140deg)
 		&:nth-child(11)
 			top: 435px
 			font-size: 97px
@@ -933,6 +1065,7 @@ img
 			left: 574px
 			animation-name: anim-11
 			animation-delay: 0.80s
+			transform: rotate(120deg)
 		&:nth-child(12)
 			top: 590px
 			font-size: 118px
@@ -940,6 +1073,7 @@ img
 			left: 0
 			animation-name: anim-12
 			animation-delay: 0.60s
+			transform: rotate(-146deg)
 		&:nth-child(13)
 			top: 639px
 			font-size: 118px
@@ -947,6 +1081,7 @@ img
 			left: 307px
 			animation-name: anim-13
 			animation-delay: 0.70s
+			transform: rotate(-203deg)
 		&:nth-child(14)
 			top: 606px
 			font-size: 88px
@@ -954,6 +1089,7 @@ img
 			left: 524px
 			animation-name: anim-14
 			animation-delay: 0.90s
+			transform: rotate(-222deg)
 		//element 2
 		&:nth-child(15)
 			top: 70px
@@ -962,6 +1098,7 @@ img
 			left: 357px
 			animation-name: anim2-15
 			animation-delay: 0.00s
+			transform: rotate(-73deg)
 		&:nth-child(16)
 			top: -52px
 			font-size: 92px
@@ -969,6 +1106,7 @@ img
 			left: 26px
 			animation-name: anim2-16
 			animation-delay: 0.10s
+			transform: rotate(-109deg)
 		&:nth-child(17)
 			top: 158px
 			font-size: 27px
@@ -976,6 +1114,7 @@ img
 			left: 464px
 			animation-name: anim2-17
 			animation-delay: 0.20s
+			transform: rotate(0deg)
 		&:nth-child(18)
 			top: 338px
 			font-size: 31px
@@ -983,6 +1122,7 @@ img
 			left: 14px
 			animation-name: anim2-18
 			animation-delay: 0.00s
+			transform: rotate(-158deg)
 		&:nth-child(19)
 			top: 309px
 			font-size: 54px
@@ -990,6 +1130,7 @@ img
 			left: 622px
 			animation-name: anim2-19
 			animation-delay: 0.50s
+			transform: rotate(5deg)
 		&:nth-child(20)
 			top: 448px
 			font-size: 57px
@@ -997,6 +1138,7 @@ img
 			left: 21px
 			animation-name: anim2-20
 			animation-delay: 0.70s
+			transform: rotate(-190deg)
 		&:nth-child(21)
 			top: 585px
 			font-size: 27px
@@ -1004,6 +1146,7 @@ img
 			left: 264px
 			animation-name: anim2-21
 			animation-delay: 0.30s
+			transform: rotate(-225deg)
 		&:nth-child(22)
 			top: 585px
 			font-size: 54px
@@ -1011,6 +1154,7 @@ img
 			left: 339px
 			animation-name: anim2-22
 			animation-delay: 0.40s
+			transform: rotate(-245deg)
 		&:nth-child(23)
 			top: 687px
 			font-size: 92px
@@ -1018,6 +1162,7 @@ img
 			left: 465px
 			animation-name: anim2-23
 			animation-delay: 0.30s
+			transform: rotate(99deg)
 		//element 3
 		&:nth-child(24)
 			top: 139px
@@ -1026,6 +1171,7 @@ img
 			left: 158px
 			animation-name: anim3-24
 			animation-delay: 0.0s
+			transform: rotate(58deg)
 		&:nth-child(25)
 			top: 85px
 			font-size: 36px
@@ -1033,6 +1179,7 @@ img
 			left: 522px
 			animation-name: anim3-25
 			animation-delay: 0.5s
+			transform: rotate(186deg)
 		&:nth-child(26)
 			top: 227px
 			font-size: 43px
@@ -1040,6 +1187,7 @@ img
 			left: 460px
 			animation-name: anim3-26
 			animation-delay: 0.2s
+			transform: rotate(0deg)
 		&:nth-child(27)
 			top: 442px
 			font-size: 32px
@@ -1047,6 +1195,7 @@ img
 			left: 153px
 			animation-name: anim3-27
 			animation-delay: 0.6s
+			transform: rotate(-72deg)
 		&:nth-child(28)
 			top: 499px
 			font-size: 43px
@@ -1054,6 +1203,7 @@ img
 			left: 224px
 			animation-name: anim3-28
 			animation-delay: 0.5s
+			transform: rotate(-60deg)
 		&:nth-child(29)
 			top: 524px
 			font-size: 24px
@@ -1061,6 +1211,7 @@ img
 			left: 422px
 			animation-name: anim3-29
 			animation-delay: 0.1s
+			transform: rotate(-80deg)
 		&:nth-child(30)
 			top: 648px
 			font-size: 56px
@@ -1068,6 +1219,7 @@ img
 			left: 179px
 			animation-name: anim3-30
 			animation-delay: 0.8s
+			transform: rotate(150deg)
 		//element 4
 		&:nth-child(31)
 			top: 170px
@@ -1076,6 +1228,7 @@ img
 			left: 300px
 			animation-name: anim4-31
 			animation-delay: 0.0s
+			transform: rotate(0deg)
 		&:nth-child(32)
 			top: 128px
 			font-size: 37px
@@ -1083,6 +1236,7 @@ img
 			left: 443px
 			animation-name: anim4-32
 			animation-delay: 0.7s
+			transform: rotate(-2deg)
 		&:nth-child(33)
 			top: 457px
 			font-size: 23px
@@ -1090,6 +1244,7 @@ img
 			left: 226px
 			animation-name: anim4-33
 			animation-delay: 0.2s
+			transform: rotate(15deg)
 		&:nth-child(34)
 			top: 601px
 			font-size: 37px
@@ -1097,6 +1252,7 @@ img
 			left: 293px
 			animation-name: anim4-34
 			animation-delay: 0.6s
+			transform: rotate(45deg)
 		//element 5
 		&:nth-child(35)
 			top: 161px
@@ -1105,6 +1261,7 @@ img
 			left: 184px
 			animation-name: anim5-35
 			animation-delay: 0.0s
+			transform: rotate(-53deg)
 		&:nth-child(36)
 			top: 227px
 			font-size: 22px
@@ -1112,6 +1269,7 @@ img
 			left: 300px
 			animation-name: anim5-36
 			animation-delay: 0.7s
+			transform: rotate(0deg)
 		&:nth-child(37)
 			top: 160px
 			font-size: 29px
@@ -1119,6 +1277,7 @@ img
 			left: 564px
 			animation-name: anim5-37
 			animation-delay: 0.3s
+			transform: rotate(54deg)
 		&:nth-child(38)
 			top: 479px
 			font-size: 22px
@@ -1126,6 +1285,7 @@ img
 			left: 401px
 			animation-name: anim5-38
 			animation-delay: 0.1s
+			transform: rotate(130deg)
 		&:nth-child(39)
 			top: 579px
 			font-size: 29px
@@ -1133,6 +1293,7 @@ img
 			left: 143px
 			animation-name: anim5-39
 			animation-delay: 0.8s
+			transform: rotate(132deg)
 		&:nth-child(40)
 			top: 589px
 			font-size: 27px
@@ -1140,6 +1301,7 @@ img
 			left: 544px
 			animation-name: anim5-40
 			animation-delay: 0.9s
+			transform: rotate(131deg)
 	
 
 
@@ -1199,7 +1361,7 @@ img
 			float: left
 			width: 33.333%
 			border-left: 1px solid transparent
-			transition: 0.5s
+			transition: all 0.5s
 			&:before
 				z-index: 2
 			& + &
@@ -1458,13 +1620,17 @@ img
 		vertical-align: middle
 	&__prev
 		position: absolute
-		left: 160px
-		top: 220px
-		font-size: 0
+		left: 140px
+		top: 205px
+		width: 80px
+		height: 80px
+		+vertical
 	&__next
 		position: absolute
-		right: 160px
-		top: 220px
+		right: 140px
+		top: 205px
+		width: 80px
+		height: 80px
 		z-index: 0
 	.main-pos
 		z-index: 3000
@@ -1592,6 +1758,32 @@ img
 		transform: scale(1.75)
 	
 
+/* ===================================
+	 Tutorial
+	 =================================== */
+.tutorial
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	z-index: 15
+	background-color: #ffffff
+	transform: translate3d(100%,0,0)
+	transition: all 1s ease-in-out
+	+vertical
+	&.is-active
+		transform: translate3d(0,0,0)
+	&__in
+		width: 100%
+		padding-left: 80px
+		padding-right: 80px
+		display: inline-block
+		vertical-align: middle
+	
+	
 /* ===================================
 	 Other Styles
 	 =================================== */

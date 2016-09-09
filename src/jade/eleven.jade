@@ -1,8 +1,12 @@
 extend includes/_layout
+block counterValue
+	-var counterValue = '9'
 block title
 	title 11
 block body
 	body.s11
+		include includes/_tutorial
+		include includes/_header
 		.wrapper
 			.wrapper__in.text-left
 				.row
@@ -11,5 +15,6 @@ block body
 						img.s11__img.s11__img_margin(src='img/11/1.png' srcset='img/11/1@2x.png 2x')
 					.col.s11__col_1.rel.text-center
 						img.s11__img(src='img/11/2.png' srcset='img/11/2@2x.png 2x')
+		include includes/_footer
 	block js
 		script(src="app.js")
