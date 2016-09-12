@@ -9692,6 +9692,13 @@ img {
     -moz-animation-name: bg-anim-7;
     -o-animation-name: bg-anim-7;
     animation-name: bg-anim-7; }
+  .s10__img-bg_8 {
+    left: 0;
+    top: 100px;
+    -webkit-animation-name: bg-anim-8;
+    -moz-animation-name: bg-anim-8;
+    -o-animation-name: bg-anim-8;
+    animation-name: bg-anim-8; }
 
 .s10__img_1 {
   -webkit-transition: all 0.5s;
@@ -10847,6 +10854,142 @@ img {
     -moz-transform: translateY(20px) translateX(-45px);
     -o-transform: translateY(20px) translateX(-45px);
     transform: translateY(20px) translateX(-45px); }
+  100% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-filter: blur(20px);
+    filter: blur(20px); } }
+
+@-webkit-keyframes bg-anim-8 {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    -webkit-transform: translateY(0) translateX(15px);
+    transform: translateY(0) translateX(15px); }
+  4% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-filter: blur(0);
+    filter: blur(0); }
+  12.5% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-filter: blur(0);
+    filter: blur(0); }
+  21% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-filter: blur(0);
+    filter: blur(0); }
+  25% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    -webkit-transform: translateY(-60px) translateX(-35px);
+    transform: translateY(-60px) translateX(-35px); }
+  100% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-filter: blur(20px);
+    filter: blur(20px); } }
+
+@-moz-keyframes bg-anim-8 {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: blur(20px);
+    -moz-transform: translateY(0) translateX(15px);
+    transform: translateY(0) translateX(15px); }
+  4% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: blur(0); }
+  12.5% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: blur(0); }
+  21% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: blur(0); }
+  25% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: blur(20px);
+    -moz-transform: translateY(-60px) translateX(-35px);
+    transform: translateY(-60px) translateX(-35px); }
+  100% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: blur(20px); } }
+
+@-o-keyframes bg-anim-8 {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: blur(20px);
+    -o-transform: translateY(0) translateX(15px);
+    transform: translateY(0) translateX(15px); }
+  4% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: blur(0); }
+  12.5% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: blur(0); }
+  21% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: blur(0); }
+  25% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: blur(20px);
+    -o-transform: translateY(-60px) translateX(-35px);
+    transform: translateY(-60px) translateX(-35px); }
+  100% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: blur(20px); } }
+
+@keyframes bg-anim-8 {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    -webkit-transform: translateY(0) translateX(15px);
+    -moz-transform: translateY(0) translateX(15px);
+    -o-transform: translateY(0) translateX(15px);
+    transform: translateY(0) translateX(15px); }
+  4% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-filter: blur(0);
+    filter: blur(0); }
+  12.5% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-filter: blur(0);
+    filter: blur(0); }
+  21% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-filter: blur(0);
+    filter: blur(0); }
+  25% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    -webkit-transform: translateY(-60px) translateX(-35px);
+    -moz-transform: translateY(-60px) translateX(-35px);
+    -o-transform: translateY(-60px) translateX(-35px);
+    transform: translateY(-60px) translateX(-35px); }
   100% {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";

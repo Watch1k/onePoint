@@ -1484,6 +1484,10 @@ img
 			left: 500px
 			top: 370px
 			animation-name: bg-anim-7
+		&_8
+			left: 0
+			top: 100px
+			animation-name: bg-anim-8
 		//&:nth-child(4)
 		//	animation-delay: 5.5s
 		//&:nth-child(6)
@@ -1767,6 +1771,28 @@ img
 		opacity: 0
 		filter: blur(20px)
 		transform: translateY(20px) translateX(-45px)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-8
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(15px)
+	4%
+		opacity: 1
+		filter: blur(0)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(-60px) translateX(-35px)
 	100%
 		opacity: 0
 		filter: blur(20px)
