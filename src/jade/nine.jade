@@ -1,4 +1,6 @@
 extend includes/_layout
+block counterValue
+	-var counterValue = '7'
 block title
 	title 9
 block tooltip
@@ -6,8 +8,10 @@ block body
 	body.s9
 		include includes/_tutorial
 		include includes/_header
-		.s14__wrapper.wrapper
+		.s9__wrapper.wrapper
 			.wrapper__in
+				.s9__row
+					img.s9__title(src='img/9/title.png' srcset='img/9/title@2x.png 2x')
 				#spinner1.s9__spinner.spinner
 					strong.spinner__text
 					img.s9__img(src='img/9/1.png' srcset='img/9/1@2x.png 2x')

@@ -1349,6 +1349,7 @@ img
 	 =================================== */
 .s9
 	&__spinner
+		margin-top: 90px
 		display: inline-block
 		& + &
 			margin-left: 60px
@@ -1431,7 +1432,7 @@ img
 		&.is-active
 			display: block
 	&__title
-		margin-bottom: 20px
+		margin-bottom: 60px
 	&__text &__img + &__img
 		display: none
 	&__shadow
@@ -1445,14 +1446,45 @@ img
 			&.is-active
 				max-width: 100%
 				opacity: 1
+	&__img-bg
+		opacity: 0
+		position: absolute
+		left: 50px
+		top: 0
+		max-width: none
+		z-index: 10
+		animation: bg-anim 12s infinite
+		animation-delay: 1.5s
+		&:nth-child(4)
+			animation-delay: 4.5s
+		&:nth-child(6)
+			animation-delay: 7.5s
+		&:nth-child(8)
+			animation-delay: 10.5s
 	//IMAGE animation
 	&__img
 		&_1
 			transition: all 0.5s
 			&.is-active
 				transform: translateY(70px) rotateZ(10deg) translateZ(0)
-		&_margin
-			margin-top: 40px
+		&_3
+			position: absolute
+			top: 50px
+			left: 20px
+			width: 541px
+			max-width: none
+			z-index: 1
+			opacity: 0
+			animation: tree-anim 12s infinite
+			&:nth-child(3)
+				animation-delay: 3s
+				z-index: 2
+			&:nth-child(5)
+				animation-delay: 6s
+				z-index: 3
+			&:nth-child(7)
+				animation-delay: 9s
+				z-index: 4
 		&-1
 			animation: move-1-1 0.5s forwards
 			&.is-active
@@ -1515,13 +1547,16 @@ img
 			top: -20%
 			left: 20%
 			animation-duration: 2.5s
+	&__padding
+		padding-top: 100px
 	&__col
 		float: left
 		width: 55%
 		& + &
+			padding-top: 0
 			width: 45%
 		&_1
-			margin-top: -120px
+			margin-top: -180px
 			padding-left: 50px
 		&_3
 			margin-top: -200px
@@ -1552,6 +1587,26 @@ img
 			top: 0.5%
 			max-width: 71%
 			width: 71%
+
+@keyframes bg-anim
+	0%
+		opacity: 0
+	5%
+		opacity: 0
+	12.5%
+		opacity: 1
+	20%
+		opacity: 1
+	25%
+		opacity: 0
+		
+@keyframes tree-anim
+	0%
+		opacity: 0
+	50%
+		opacity: 1
+	100%
+		opacity: 0
 
 @keyframes pulse-1
 	0%
