@@ -547,7 +547,7 @@ function enableSwipe() {
 			thickness: 13,
 			value: 0.93,
 			lineCap: 'round',
-			fill: {gradient: ['#F36039', '#F48F00']},
+			fill: {gradient: ['#F48F00', '#F36039']},
 			animation: {duration: 2400, easing: "swing"}
 		}).on('circle-animation-progress', function (event, progress) {
 			$(this).find('strong').html(parseInt(93 * progress) + '<span>%</span>');
