@@ -1063,7 +1063,13 @@ function enableSwipe() {
 			img = $('.js-10-img'),
 			imgToggle = $('.js-10-img-toggle'),
 			shadow1 = $('.js-10-shadow-1'),
-			text = $('.js-10-text');
+			text = $('.js-10-text'),
+			fix = $('.js-10-fix'),
+			fix2 = $('.js-10-fix-2');
+
+		fix2.on('click', function () {
+			fix.stop().css('opacity', '1').animate({'opacity': 0}, 12000);
+		});
 
 		btn1.on('click', function () {
 			$(this).siblings('.s10__box').toggleClass('is-active').children('img').toggleClass('is-active');
