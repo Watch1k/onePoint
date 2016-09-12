@@ -8,4 +8,5 @@
 //=include lib/slick.min.js
 //=include lib/slider.js
 //=include lib/particles.min.js
+//=include lib/circle-progress.min.js
 //=include lib/common.js

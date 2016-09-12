@@ -8455,96 +8455,96 @@ img {
 /* ===================================
 	 #6
 	 @mixin ================================== */
-.s6__title {
-  position: absolute;
-  z-index: -1;
-  left: 80px;
-  top: 20%; }
-
-.s6__wrapper-in {
-  height: 100%; }
-
-.s6__slider {
-  width: 80%; }
-  .s6__slider-item {
-    height: 100vh !important; }
-  .s6__slider-img {
-    margin-top: 32%; }
-
-.s6 .ui-slider {
-  position: fixed;
-  z-index: 7;
-  right: 80px;
-  top: 50%;
-  height: 454px;
-  width: 18px;
-  background-color: #c5ced7;
-  -webkit-border-radius: 14px;
-  -moz-border-radius: 14px;
-  border-radius: 14px;
-  border: solid 2px #ffffff;
-  -webkit-box-shadow: 0 0 2px 0 rgba(173, 173, 173, 0.5);
-  -moz-box-shadow: 0 0 2px 0 rgba(173, 173, 173, 0.5);
-  box-shadow: 0 0 2px 0 rgba(173, 173, 173, 0.5);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%); }
-  .s6 .ui-slider:before {
-    content: '';
+.s6 {
+  background: url("img/6/bg.png") 85% 50% no-repeat;
+  -moz-background-size: 365px 514px;
+  -o-background-size: 365px 514px;
+  background-size: 365px 514px; }
+  .s6__title {
     position: absolute;
-    left: -50px;
-    top: 0px;
-    height: 450px;
-    width: 29px;
-    background: url(img/6/mark.png) center center no-repeat;
-    -moz-background-size: 29px 450px;
-    -o-background-size: 29px 450px;
-    background-size: 29px 450px; }
-
-.s6 .ui-slider-range {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  -webkit-border-radius: 14px;
-  -moz-border-radius: 14px;
-  border-radius: 14px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#09bdff), to(#3372e3));
-  background: -webkit-linear-gradient(top, #09bdff, #3372e3);
-  background: -moz-linear-gradient(top, #09bdff, #3372e3);
-  background: -o-linear-gradient(top, #09bdff, #3372e3);
-  background: linear-gradient(to bottom, #09bdff, #3372e3); }
-  .s6 .ui-slider-range:before {
-    content: '';
+    z-index: -1;
+    left: 80px;
+    top: 15%; }
+  .s6__wrapper-in {
+    height: 100%; }
+  .s6__slider {
+    width: 80%; }
+    .s6__slider-item {
+      height: 100vh !important; }
+    .s6__slider-img {
+      margin-top: 35%; }
+  .s6 .ui-slider {
+    position: fixed;
+    z-index: 7;
+    right: 80px;
+    top: 50%;
+    height: 454px;
+    width: 18px;
+    background-color: #c5ced7;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    border: solid 2px #ffffff;
+    -webkit-box-shadow: 0 0 2px 0 rgba(173, 173, 173, 0.5);
+    -moz-box-shadow: 0 0 2px 0 rgba(173, 173, 173, 0.5);
+    box-shadow: 0 0 2px 0 rgba(173, 173, 173, 0.5);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    .s6 .ui-slider:before {
+      content: '';
+      position: absolute;
+      left: -50px;
+      top: 0px;
+      height: 450px;
+      width: 29px;
+      background: url(img/6/mark.png) center center no-repeat;
+      -moz-background-size: 29px 450px;
+      -o-background-size: 29px 450px;
+      background-size: 29px 450px; }
+  .s6 .ui-slider-range {
     position: absolute;
-    top: 0;
-    left: -50px;
-    width: 29px;
     bottom: 0;
-    background: url(img/6/mark2.png) bottom center no-repeat;
-    -moz-background-size: 29px 450px;
-    -o-background-size: 29px 450px;
-    background-size: 29px 450px; }
-
-.s6 .ui-slider-handle {
-  position: absolute;
-  left: -35px;
-  bottom: 0;
-  height: 142px;
-  width: 85px;
-  background: url(img/6/button.png) center center no-repeat;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
-  -ms-touch-action: none;
-  touch-action: none;
-  -webkit-transform: translateY(50%);
-  -moz-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  -o-transform: translateY(50%);
-  transform: translateY(50%); }
+    left: 0;
+    right: 0;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#09bdff), to(#3372e3));
+    background: -webkit-linear-gradient(top, #09bdff, #3372e3);
+    background: -moz-linear-gradient(top, #09bdff, #3372e3);
+    background: -o-linear-gradient(top, #09bdff, #3372e3);
+    background: linear-gradient(to bottom, #09bdff, #3372e3); }
+    .s6 .ui-slider-range:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50px;
+      width: 29px;
+      bottom: 0;
+      background: url(img/6/mark2.png) bottom center no-repeat;
+      -moz-background-size: 29px 450px;
+      -o-background-size: 29px 450px;
+      background-size: 29px 450px; }
+  .s6 .ui-slider-handle {
+    position: absolute;
+    left: -35px;
+    bottom: 0;
+    height: 142px;
+    width: 85px;
+    background: url(img/6/button.png) center center no-repeat;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -ms-touch-action: none;
+    touch-action: none;
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%); }
 
 /* ===================================
 	 #7
@@ -9454,23 +9454,39 @@ img {
 .s8__plus-btn {
   position: absolute;
   z-index: 10;
-  top: 190px;
-  right: 80px; }
+  top: 330px;
+  left: 80px; }
 
 .s8__info {
   display: none;
-  margin-top: 60px;
+  margin-top: 120px;
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   -o-animation-delay: 1s;
   animation-delay: 1s; }
 
 .s8__money {
-  display: none;
+  pointer-events: none;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   position: absolute;
   top: 140px;
+  width: 200px;
   right: 0;
-  z-index: 1; }
+  z-index: 1;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  -o-transform-origin: top right;
+  transform-origin: top right;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  .s8__money.is-active {
+    width: 507px;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
 
 /* ===================================
 	 #10

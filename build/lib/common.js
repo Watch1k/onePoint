@@ -78,6 +78,7 @@ function enableSwipe() {
 				line.css('left', 82 + ui.position.left);
 				if (ui.position.left > 420) {
 					// if (!ind) {
+						circle.unbind();
 						circle.animate({'left': 524}, 200);
 						line.animate({'left': 524}, 200, function () {
 							enableSwipe();
@@ -489,15 +490,26 @@ function enableSwipe() {
 		btn.on('click', function () {
 			info.fadeToggle();
 			info.addClass('zoomIn');
-			money.fadeToggle();
-			money.addClass('zoomInRight');
+			money.toggleClass('is-active');
 		});
 	}
 })();
 
 /* Slide 9 */
 (function () {
+	var spinner1 = $('#spinner1');
 
+	if (spinner1.length) {
+		spinner1.circleProgress({
+			size: 220,
+			thickness: 13,
+			value: 0.9,
+			fill: {gradient: ['#F36039', '#F48F00']},
+			animation: { duration: 2400, easing: "swing" }
+		}).on('circle-animation-progress', function(event, progress) {
+		$(this).find('strong').html(parseInt(100 * progress) + '<i>%</i>');
+	});;
+	}
 })();
 
 /* Slide 10 */

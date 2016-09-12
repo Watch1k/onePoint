@@ -1,9 +1,12 @@
 extend includes/_layout
 block title
 	title 14
+block tooltip
 block body
 	body.s14
 		canvas.canvas
+		include includes/_tutorial
+		include includes/_header
 		.s14__wrapper.wrapper
 			.wrapper__in
 				.s14__send.text-center
@@ -16,5 +19,8 @@ block body
 						.s14__btn-in
 						.s14__btn-in
 					.s14__send-text Написать нам
+		include includes/_footer
 	block js
 		script(src="app.js")
+		script.
+			$('.js-header, .js-footer').addClass('is-white');

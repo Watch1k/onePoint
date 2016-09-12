@@ -1,16 +1,14 @@
 extend includes/_layout
 block title
-	title 13
+	title 9
 block tooltip
 block body
-	body.s13
-		canvas.canvas
+	body.s9
 		include includes/_tutorial
 		include includes/_header
-		.s13__wrapper.wrapper
+		.s14__wrapper.wrapper
 			.wrapper__in
+				#spinner1
 		include includes/_footer
 	block js
 		script(src="app.js")
-		script.
-			$('.js-header, .js-footer').addClass('is-white');
