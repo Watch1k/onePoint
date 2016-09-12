@@ -1005,8 +1005,9 @@ function enableSwipe() {
 			thickness: 13,
 			value: 0.9,
 			lineCap: 'round',
-			fill: {gradient: ['#F36039', '#F48F00']},
-			animation: {duration: 2400, easing: "swing"}
+			startAngle: -Math.PI / 2,
+			fill: {gradient: ['#F48F00', '#F36039']},
+			animation: {duration: 6000, easing: "swing"}
 		}).on('circle-animation-progress', function (event, progress) {
 			$(this).find('strong').html(parseInt(90 * progress) + '<span>%</span>');
 		});
@@ -1018,8 +1019,9 @@ function enableSwipe() {
 			thickness: 13,
 			value: 0.88,
 			lineCap: 'round',
-			fill: {gradient: ['#F36039', '#F48F00']},
-			animation: {duration: 2400, easing: "swing"}
+			startAngle: -Math.PI / 2,
+			fill: {gradient: ['#F48F00', '#F36039']},
+			animation: {duration: 6000, easing: "swing"}
 		}).on('circle-animation-progress', function (event, progress) {
 			$(this).find('strong').html(parseInt(88 * progress) + '<span>%</span>');
 		});
@@ -1031,8 +1033,9 @@ function enableSwipe() {
 			thickness: 13,
 			value: 0.38,
 			lineCap: 'round',
-			fill: {gradient: ['#F36039', '#F48F00']},
-			animation: {duration: 2400, easing: "swing"}
+			startAngle: -Math.PI / 2,
+			fill: {gradient: ['#F48F00', '#F36039']},
+			animation: {duration: 6000, easing: "swing"}
 		}).on('circle-animation-progress', function (event, progress) {
 			$(this).find('strong').html(parseInt(38 * progress) + '<span>%</span>');
 		});
@@ -1044,8 +1047,9 @@ function enableSwipe() {
 			thickness: 13,
 			value: 0.93,
 			lineCap: 'round',
+			startAngle: -Math.PI / 2,
 			fill: {gradient: ['#F48F00', '#F36039']},
-			animation: {duration: 2400, easing: "swing"}
+			animation: {duration: 6000, easing: "swing"}
 		}).on('circle-animation-progress', function (event, progress) {
 			$(this).find('strong').html(parseInt(93 * progress) + '<span>%</span>');
 		});
