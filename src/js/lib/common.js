@@ -508,7 +508,7 @@ function enableSwipe() {
 			thickness: 13,
 			value: 0.9,
 			lineCap: 'round',
-			fill: {gradient: ['#F36039', '#F48F00']},
+			fill: {gradient: ['#F48F00', '#F36039']},
 			animation: {duration: 2400, easing: "swing"}
 		}).on('circle-animation-progress', function (event, progress) {
 			$(this).find('strong').html(parseInt(90 * progress) + '<span>%</span>');
@@ -521,7 +521,7 @@ function enableSwipe() {
 			thickness: 13,
 			value: 0.88,
 			lineCap: 'round',
-			fill: {gradient: ['#F36039', '#F48F00']},
+			fill: {gradient: ['#F48F00', '#F36039']},
 			animation: {duration: 2400, easing: "swing"}
 		}).on('circle-animation-progress', function (event, progress) {
 			$(this).find('strong').html(parseInt(88 * progress) + '<span>%</span>');
@@ -534,7 +534,7 @@ function enableSwipe() {
 			thickness: 13,
 			value: 0.38,
 			lineCap: 'round',
-			fill: {gradient: ['#F36039', '#F48F00']},
+			fill: {gradient: ['#F48F00', '#F36039']},
 			animation: {duration: 2400, easing: "swing"}
 		}).on('circle-animation-progress', function (event, progress) {
 			$(this).find('strong').html(parseInt(38 * progress) + '<span>%</span>');
