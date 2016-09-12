@@ -21,7 +21,7 @@ instructionBtn.on('click', function () {
 	}, 1000);
 });
 
-tutorialBackBtn.on('click', function(){
+tutorialBackBtn.on('click', function () {
 	$(this).fadeToggle();
 	tutorial.toggleClass('is-active');
 	setTimeout(function () {
@@ -62,7 +62,7 @@ function enableSwipe() {
 		var slider = $('.js-1-slider'),
 			circle = $('.js-1-circle'),
 			line = $('.js-1-line');
-			// ind = false;
+		// ind = false;
 
 		disableSwipe();
 
@@ -78,14 +78,14 @@ function enableSwipe() {
 				line.css('left', 82 + ui.position.left);
 				if (ui.position.left > 420) {
 					// if (!ind) {
-						circle.unbind();
-						circle.animate({'left': 524}, 200);
-						line.animate({'left': 524}, 200, function () {
-							enableSwipe();
-							console.log('next slide');
-							// Android.openSlide($('body').attr('data-next-slide'));
-							// ind = false;
-						});
+					circle.unbind();
+					circle.animate({'left': 524}, 200);
+					line.animate({'left': 524}, 200, function () {
+						enableSwipe();
+						console.log('next slide');
+						// Android.openSlide($('body').attr('data-next-slide'));
+						// ind = false;
+					});
 					// }
 					return false;
 					// ind = true;
@@ -497,18 +497,61 @@ function enableSwipe() {
 
 /* Slide 9 */
 (function () {
-	var spinner1 = $('#spinner1');
+	var spinner1 = $('#spinner1'),
+		spinner2 = $('#spinner2'),
+		spinner3 = $('#spinner3'),
+		spinner4 = $('#spinner4');
 
 	if (spinner1.length) {
 		spinner1.circleProgress({
 			size: 220,
 			thickness: 13,
 			value: 0.9,
+			lineCap: 'round',
 			fill: {gradient: ['#F36039', '#F48F00']},
-			animation: { duration: 2400, easing: "swing" }
-		}).on('circle-animation-progress', function(event, progress) {
-		$(this).find('strong').html(parseInt(100 * progress) + '<i>%</i>');
-	});;
+			animation: {duration: 2400, easing: "swing"}
+		}).on('circle-animation-progress', function (event, progress) {
+			$(this).find('strong').html(parseInt(90 * progress) + '<span>%</span>');
+		});
+	}
+
+	if (spinner2.length) {
+		spinner2.circleProgress({
+			size: 220,
+			thickness: 13,
+			value: 0.88,
+			lineCap: 'round',
+			fill: {gradient: ['#F36039', '#F48F00']},
+			animation: {duration: 2400, easing: "swing"}
+		}).on('circle-animation-progress', function (event, progress) {
+			$(this).find('strong').html(parseInt(88 * progress) + '<span>%</span>');
+		});
+	}
+
+	if (spinner3.length) {
+		spinner3.circleProgress({
+			size: 220,
+			thickness: 13,
+			value: 0.38,
+			lineCap: 'round',
+			fill: {gradient: ['#F36039', '#F48F00']},
+			animation: {duration: 2400, easing: "swing"}
+		}).on('circle-animation-progress', function (event, progress) {
+			$(this).find('strong').html(parseInt(38 * progress) + '<span>%</span>');
+		});
+	}
+
+	if (spinner4.length) {
+		spinner4.circleProgress({
+			size: 220,
+			thickness: 13,
+			value: 0.93,
+			lineCap: 'round',
+			fill: {gradient: ['#F36039', '#F48F00']},
+			animation: {duration: 2400, easing: "swing"}
+		}).on('circle-animation-progress', function (event, progress) {
+			$(this).find('strong').html(parseInt(93 * progress) + '<span>%</span>');
+		});
 	}
 })();
 
