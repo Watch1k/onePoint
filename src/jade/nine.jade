@@ -9,8 +9,11 @@ block body
 		include includes/_tutorial
 		include includes/_header
 		.s9__wrapper.wrapper
-			.wrapper__in
-
+			img.s9__title(src='img/9/title.png' srcset='img/9/title@2x.png 2x')
+			.s9__tab.js-9-tab(tab-index='1')
+				img.s9__img(src='img/9/1.png' srcset='img/9/1@2x.png 2x')
+			.s9__tablet.js-9-tablet
+			.s9__range.js-9-range
 		include includes/_footer
 	block js
 		script(src="app.js")

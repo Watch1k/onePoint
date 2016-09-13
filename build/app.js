@@ -994,7 +994,18 @@ function enableSwipe() {
 
 /* Slide 9 */
 (function () {
+	if ($('body').hasClass('s9')) {
+		var range = $('.js-9-slider');
 
+		range.ionRangeSlider({
+			type: 'single',
+			hide_min_max: true,
+			hide_from_to: true,
+			min: 1,
+			max: 6,
+			from: 1
+		});
+	}
 })();
 
 /* Slide 10 */
@@ -1029,65 +1040,67 @@ function enableSwipe() {
 
 /* Slide 11 */
 (function () {
-	var spinner1 = $('#spinner1'),
-		spinner2 = $('#spinner2'),
-		spinner3 = $('#spinner3'),
-		spinner4 = $('#spinner4');
+	if ($('body').hasClass('s11')) {
+		var spinner1 = $('#spinner1'),
+			spinner2 = $('#spinner2'),
+			spinner3 = $('#spinner3'),
+			spinner4 = $('#spinner4');
 
-	if (spinner1.length) {
-		spinner1.circleProgress({
-			size: 220,
-			thickness: 13,
-			value: 0.9,
-			lineCap: 'round',
-			startAngle: -Math.PI / 2,
-			fill: {gradient: ['#F48F00', '#F36039']},
-			animation: {duration: 3000, easing: "swing"}
-		}).on('circle-animation-progress', function (event, progress) {
-			$(this).find('strong').html(parseInt(90 * progress) + '<span>%</span>');
-		});
-	}
+		if (spinner1.length) {
+			spinner1.circleProgress({
+				size: 220,
+				thickness: 13,
+				value: 0.9,
+				lineCap: 'round',
+				startAngle: -Math.PI / 2,
+				fill: {gradient: ['#F48F00', '#F36039']},
+				animation: {duration: 3000, easing: "swing"}
+			}).on('circle-animation-progress', function (event, progress) {
+				$(this).find('strong').html(parseInt(90 * progress) + '<span>%</span>');
+			});
+		}
 
-	if (spinner2.length) {
-		spinner2.circleProgress({
-			size: 220,
-			thickness: 13,
-			value: 0.88,
-			lineCap: 'round',
-			startAngle: -Math.PI / 2,
-			fill: {gradient: ['#F48F00', '#F36039']},
-			animation: {duration: 3000, easing: "swing"}
-		}).on('circle-animation-progress', function (event, progress) {
-			$(this).find('strong').html(parseInt(88 * progress) + '<span>%</span>');
-		});
-	}
+		if (spinner2.length) {
+			spinner2.circleProgress({
+				size: 220,
+				thickness: 13,
+				value: 0.88,
+				lineCap: 'round',
+				startAngle: -Math.PI / 2,
+				fill: {gradient: ['#F48F00', '#F36039']},
+				animation: {duration: 3000, easing: "swing"}
+			}).on('circle-animation-progress', function (event, progress) {
+				$(this).find('strong').html(parseInt(88 * progress) + '<span>%</span>');
+			});
+		}
 
-	if (spinner3.length) {
-		spinner3.circleProgress({
-			size: 220,
-			thickness: 13,
-			value: 0.38,
-			lineCap: 'round',
-			startAngle: -Math.PI / 2,
-			fill: {gradient: ['#F48F00', '#F36039']},
-			animation: {duration: 3000, easing: "swing"}
-		}).on('circle-animation-progress', function (event, progress) {
-			$(this).find('strong').html(parseInt(38 * progress) + '<span>%</span>');
-		});
-	}
+		if (spinner3.length) {
+			spinner3.circleProgress({
+				size: 220,
+				thickness: 13,
+				value: 0.38,
+				lineCap: 'round',
+				startAngle: -Math.PI / 2,
+				fill: {gradient: ['#F48F00', '#F36039']},
+				animation: {duration: 3000, easing: "swing"}
+			}).on('circle-animation-progress', function (event, progress) {
+				$(this).find('strong').html(parseInt(38 * progress) + '<span>%</span>');
+			});
+		}
 
-	if (spinner4.length) {
-		spinner4.circleProgress({
-			size: 220,
-			thickness: 13,
-			value: 0.93,
-			lineCap: 'round',
-			startAngle: -Math.PI / 2,
-			fill: {gradient: ['#F48F00', '#F36039']},
-			animation: {duration: 3000, easing: "swing"}
-		}).on('circle-animation-progress', function (event, progress) {
-			$(this).find('strong').html(parseInt(93 * progress) + '<span>%</span>');
-		});
+		if (spinner4.length) {
+			spinner4.circleProgress({
+				size: 220,
+				thickness: 13,
+				value: 0.93,
+				lineCap: 'round',
+				startAngle: -Math.PI / 2,
+				fill: {gradient: ['#F48F00', '#F36039']},
+				animation: {duration: 3000, easing: "swing"}
+			}).on('circle-animation-progress', function (event, progress) {
+				$(this).find('strong').html(parseInt(93 * progress) + '<span>%</span>');
+			});
+		}
 	}
 })();
 

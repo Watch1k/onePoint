@@ -1348,26 +1348,24 @@ img
 	 #9
 	 =================================== */
 .s9
-	&__spinner
-		margin-top: 90px
-		display: inline-block
-		& + &
-			margin-left: 60px
-	&__img
-		margin-top: 25px
-	
-.spinner
-	position: relative
-	width: 220px
-	&__text
+	&__title
 		position: absolute
-		+vcenter
-		top: 113px
-		left: 52%
-		font-size: 64px
-		+roboto-b
-		color: #6e6e6e
-		line-height: 1
+		z-index: 1
+		top: 120px
+		left: 80px
+	&__tab
+		position: absolute
+		z-index: 2
+		top: 275px
+		left: 80px
+	&__range
+		position: absolute
+		z-index: 10
+		bottom: 200px
+		left: 80px
+		width: 200px
+		height: 100px
+
 
 /* ===================================
 	 #10
@@ -1934,7 +1932,7 @@ img
 	25%
 		opacity: 0
 		filter: blur(20px)
-		transform: translateY(500px) translateX(-25px) rotateZ(640deg)
+		transform: translateY(500px) translateX(-25px) rotateZ(200deg)
 	100%
 		opacity: 0
 		filter: blur(20px)
