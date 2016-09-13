@@ -2240,11 +2240,26 @@ img
 	 #11
 	 =================================== */
 .s11
-	&__title
-		margin-bottom: 20px
+	&__spinner
+		margin-top: 90px
+		display: inline-block
+		& + &
+			margin-left: 60px
 	&__img
-		&_margin
-			margin-top: 40px
+		margin-top: 25px
+
+.spinner
+	position: relative
+	width: 220px
+	&__text
+		position: absolute
+		+vcenter
+		top: 113px
+		left: 52%
+		font-size: 64px
+		+roboto-b
+		color: #6e6e6e
+		line-height: 1
 		
 
 /* ===================================

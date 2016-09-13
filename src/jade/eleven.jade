@@ -3,18 +3,27 @@ block counterValue
 	-var counterValue = '9'
 block title
 	title 11
+block tooltip
 block body
 	body.s11
 		include includes/_tutorial
 		include includes/_header
-		.wrapper
-			.wrapper__in.text-left
-				.row
-					.col
-						img.s11__title(src='img/11/title.png' srcset='img/11/title@2x.png 2x')
-						img.s11__img.s11__img_margin(src='img/11/1.png' srcset='img/11/1@2x.png 2x')
-					.col.s11__col_1.rel.text-center
-						img.s11__img(src='img/11/2.png' srcset='img/11/2@2x.png 2x')
+		.s11__wrapper.wrapper
+			.wrapper__in
+				.s11__row
+					img.s11__title(src='img/11/title.png' srcset='img/11/title@2x.png 2x')
+				#spinner1.s11__spinner.spinner
+					strong.spinner__text
+					img.s11__img(src='img/11/1.png' srcset='img/11/1@2x.png 2x')
+				#spinner2.s11__spinner.spinner
+					strong.spinner__text
+					img.s11__img(src='img/11/2.png' srcset='img/11/2@2x.png 2x')
+				#spinner3.s11__spinner.spinner
+					strong.spinner__text
+					img.s11__img(src='img/11/3.png' srcset='img/11/3@2x.png 2x')
+				#spinner4.s11__spinner.spinner
+					strong.spinner__text
+					img.s11__img(src='img/11/4.png' srcset='img/11/4@2x.png 2x')
 		include includes/_footer
 	block js
 		script(src="app.js")

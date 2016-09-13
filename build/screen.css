@@ -13375,11 +13375,34 @@ img {
 /* ===================================
 	 #11
 	 @mixin ================================== */
-.s11__title {
-  margin-bottom: 20px; }
+.s11__spinner {
+  margin-top: 90px;
+  display: inline-block; }
+  .s11__spinner + .s11__spinner {
+    margin-left: 60px; }
 
-.s11__img_margin {
-  margin-top: 40px; }
+.s11__img {
+  margin-top: 25px; }
+
+.spinner {
+  position: relative;
+  width: 220px; }
+  .spinner__text {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top: 113px;
+    left: 52%;
+    font-size: 64px;
+    font-family: "Roboto Bold", Arial, sans-serif;
+    color: #6e6e6e;
+    line-height: 1; }
 
 /* ===================================
 	 #12

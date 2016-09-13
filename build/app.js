@@ -994,6 +994,41 @@ function enableSwipe() {
 
 /* Slide 9 */
 (function () {
+
+})();
+
+/* Slide 10 */
+(function () {
+	if ($('body').hasClass('s10')) {
+		var btn1 = $('.js-10-btn-1'),
+			img = $('.js-10-img'),
+			imgToggle = $('.js-10-img-toggle'),
+			shadow1 = $('.js-10-shadow-1'),
+			text = $('.js-10-text'),
+			fix = $('.js-10-fix'),
+			fix2 = $('.js-10-fix-2');
+
+		fix2.on('click', function () {
+			fix.stop().css('opacity', '1').animate({'opacity': 0}, 12000);
+		});
+
+		btn1.on('click', function () {
+			$(this).siblings('.s10__box').toggleClass('is-active').children('img').toggleClass('is-active');
+			$(this).siblings().filter(img).toggleClass('is-active');
+			shadow1.toggleClass('is-active');
+			//text
+			$(this).parent().siblings().filter(text).children().toggle();
+		});
+
+		setInterval(function () {
+			imgToggle.eq(0).fadeToggle();
+			imgToggle.eq(1).fadeToggle();
+		}, 5000);
+	}
+})();
+
+/* Slide 11 */
+(function () {
 	var spinner1 = $('#spinner1'),
 		spinner2 = $('#spinner2'),
 		spinner3 = $('#spinner3'),
@@ -1054,41 +1089,6 @@ function enableSwipe() {
 			$(this).find('strong').html(parseInt(93 * progress) + '<span>%</span>');
 		});
 	}
-})();
-
-/* Slide 10 */
-(function () {
-	if ($('body').hasClass('s10')) {
-		var btn1 = $('.js-10-btn-1'),
-			img = $('.js-10-img'),
-			imgToggle = $('.js-10-img-toggle'),
-			shadow1 = $('.js-10-shadow-1'),
-			text = $('.js-10-text'),
-			fix = $('.js-10-fix'),
-			fix2 = $('.js-10-fix-2');
-
-		fix2.on('click', function () {
-			fix.stop().css('opacity', '1').animate({'opacity': 0}, 12000);
-		});
-
-		btn1.on('click', function () {
-			$(this).siblings('.s10__box').toggleClass('is-active').children('img').toggleClass('is-active');
-			$(this).siblings().filter(img).toggleClass('is-active');
-			shadow1.toggleClass('is-active');
-			//text
-			$(this).parent().siblings().filter(text).children().toggle();
-		});
-
-		setInterval(function () {
-			imgToggle.eq(0).fadeToggle();
-			imgToggle.eq(1).fadeToggle();
-		}, 5000);
-	}
-})();
-
-/* Slide 11 */
-(function () {
-
 })();
 
 /* Slide 12 */
