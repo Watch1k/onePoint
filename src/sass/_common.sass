@@ -1453,8 +1453,8 @@ img
 		top: 0
 		max-width: none
 		z-index: 10
-		animation: bg-anim-1 12s infinite linear
-		animation-delay: 2.5s
+		animation: bg-anim-1 12s infinite ease-in-out
+		animation-delay: 3s
 		filter: blur(20px)
 		&_1
 			left: 450px
@@ -1485,15 +1485,90 @@ img
 			top: 370px
 			animation-name: bg-anim-7
 		&_8
-			left: 0
+			left: 100px
 			top: 100px
 			animation-name: bg-anim-8
-		//&:nth-child(4)
-		//	animation-delay: 5.5s
-		//&:nth-child(6)
-		//	animation-delay: 8.5s
-		//&:nth-child(8)
-			animation-delay: 11.5s
+	&__img-bg-2
+		opacity: 0
+		position: absolute
+		left: 50px
+		top: 0
+		max-width: none
+		z-index: 10
+		animation: bg-anim-1 12s infinite ease-in-out
+		animation-delay: 6s
+		filter: blur(20px)
+		&_9
+			left: 450px
+			top: 350px
+			animation-name: bg-anim-9
+		&_10
+			left: 100px
+			top: 350px
+			animation-name: bg-anim-10
+		&_11
+			left: 350px
+			top: 350px
+			animation-name: bg-anim-11
+		&_12
+			left: 50px
+			top: 50px
+			animation-name: bg-anim-12
+	&__img-bg-3
+		opacity: 0
+		position: absolute
+		left: 50px
+		top: 0
+		max-width: none
+		z-index: 10
+		animation: bg-anim-1 12s infinite ease-in-out
+		animation-delay: 9s
+		filter: blur(20px)
+		&_13
+			left: 400px
+			top: 350px
+			animation-name: bg-anim-13
+		&_14
+			left: 350px
+			top: 250px
+			animation-name: bg-anim-14
+		&_15
+			left: 50px
+			top: 350px
+			animation-name: bg-anim-15
+		&_16
+			left: 250px
+			top: 300px
+			animation-name: bg-anim-16
+		&_17
+			left: 50px
+			top: 150px
+			animation-name: bg-anim-17
+		&_18
+			left: 450px
+			top: 300px
+			animation-name: bg-anim-18
+		&_19
+			left: 400px
+			top: 400px
+			animation-name: bg-anim-19
+		&_20
+			left: 150px
+			top: 350px
+			animation-name: bg-anim-20
+	&__img-bg-4
+		opacity: 0
+		position: absolute
+		left: 50px
+		top: 0
+		max-width: none
+		z-index: 10
+		animation: bg-anim-1 12s infinite ease-in-out
+		filter: blur(20px)
+		&_21
+			left: 50px
+			top: 0
+			animation-name: bg-anim-21
 	//IMAGE animation
 	&__img
 		&_1
@@ -1793,6 +1868,305 @@ img
 		opacity: 0
 		filter: blur(20px)
 		transform: translateY(-60px) translateX(-35px)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-9
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(-5px)
+	4%
+		opacity: 1
+		filter: blur(0)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(-60px) translateX(35px)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-10
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(-15px)
+	4%
+		opacity: 1
+		filter: blur(0)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(-160px) translateX(335px)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-11
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(15px)
+	4%
+		opacity: 1
+		filter: blur(0)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+		transform: translateY(-50px) translateX(-25px) rotateZ(0)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(500px) translateX(-25px) rotateZ(640deg)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-12
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(15px) rotate(0)
+	4%
+		opacity: 1
+		filter: blur(0)
+		transform: translateY(-10px) translateX(25px) rotate(-10deg) rotateZ(0)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+		transform: translateY(-35px) translateX(-5px) rotateX(-30deg) rotateZ(20deg)
+	21%
+		opacity: 1
+		filter: blur(0)
+		transform: translateY(-45px) translateX(0px) rotateX(-10deg) rotateZ(40deg)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(-50px) translateX(10px) rotateX(10deg) rotateZ(60deg)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-13
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(15px)
+	4%
+		opacity: 1
+		filter: blur(0)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+		transform: translateY(-35px) translateX(-15px)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(-50px) translateX(10px)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-14
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(15px)
+	4%
+		opacity: 1
+		filter: blur(0)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+		transform: translateY(-15px) translateX(15px)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(-50px) translateX(-10px)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-15
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(15px)
+	4%
+		opacity: 1
+		filter: blur(0)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+		transform: translateY(15px) translateX(-15px)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(50px) translateX(5px)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-16
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(15px)
+	4%
+		opacity: 1
+		filter: blur(0)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(90px) translateX(-20px)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-17
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(25px)
+	4%
+		opacity: 1
+		filter: blur(0)
+	8%
+		transform: translateY(-40px) translateX(35px)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(-90px) translateX(-5px)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-18
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(25px)
+	4%
+		opacity: 1
+		filter: blur(0)
+	8%
+		transform: translateY(40px) translateX(10px)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(70px) translateX(-15px)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-19
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(0)
+	4%
+		opacity: 1
+		filter: blur(0)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+	17%
+		transform: translateY(40px) translateX(20px)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(70px) translateX(35px)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-20
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(0) translateX(0)
+	4%
+		opacity: 1
+		filter: blur(0)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(-70px) translateX(-35px)
+	100%
+		opacity: 0
+		filter: blur(20px)
+		
+@keyframes bg-anim-21
+	0%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(-100px)
+	4%
+		opacity: 1
+		filter: blur(0)
+	12.5%
+		opacity: 1
+		filter: blur(0)
+	21%
+		opacity: 1
+		filter: blur(0)
+	25%
+		opacity: 0
+		filter: blur(20px)
+		transform: translateY(100px)
 	100%
 		opacity: 0
 		filter: blur(20px)
