@@ -705,18 +705,23 @@ img
 	&__controls
 		margin-top: 50px
 	&__popup
+		opacity: 0
+		pointer-events: none
 		padding-top: 180px
 		position: absolute
 		z-index: 2000
-		right: -340px
+		right: 0
 		top: 0
 		bottom: 0
 		width: 320px
 		background: rgba(24, 150, 245, .9)
 		box-shadow: -10px 0 21px rgba(13,65,123,.34)
+		transform: translateX(340px)
 		transition: all 1s ease-in-out
 		&.is-active
-			right: 0
+			opacity: 1
+			transform: translateX(0)
+			pointer-events: auto
 		&-close
 			width: 93px
 			height: 18px

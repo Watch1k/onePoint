@@ -8281,10 +8281,13 @@ img {
   .s4__controls {
     margin-top: 50px; }
   .s4__popup {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    pointer-events: none;
     padding-top: 180px;
     position: absolute;
     z-index: 2000;
-    right: -340px;
+    right: 0;
     top: 0;
     bottom: 0;
     width: 320px;
@@ -8292,12 +8295,24 @@ img {
     -webkit-box-shadow: -10px 0 21px rgba(13, 65, 123, 0.34);
     -moz-box-shadow: -10px 0 21px rgba(13, 65, 123, 0.34);
     box-shadow: -10px 0 21px rgba(13, 65, 123, 0.34);
+    -webkit-transform: translateX(340px);
+    -moz-transform: translateX(340px);
+    -ms-transform: translateX(340px);
+    -o-transform: translateX(340px);
+    transform: translateX(340px);
     -webkit-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out; }
     .s4__popup.is-active {
-      right: 0; }
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0);
+      pointer-events: auto; }
     .s4__popup-close {
       width: 93px;
       height: 18px;

@@ -456,7 +456,7 @@ h[b[d]+"CancelAnimationFrame"]||h[b[d]+"CancelRequestAnimationFrame"];h.requestA
 				if (currentImg == itemCount - 1) {
 					currentImg = 0;
 				} else {
-					currentImg++;
+					currentImg = $(this).index();
 				}
 				img.children('img').eq(currentImg).addClass('is-active');
 				currentNav = $(this).index();
@@ -470,7 +470,7 @@ h[b[d]+"CancelAnimationFrame"]||h[b[d]+"CancelRequestAnimationFrame"];h.requestA
 				if (currentImg == 0) {
 					currentImg = itemCount - 1;
 				} else {
-					currentImg--;
+					currentImg = $(this).index();
 				}
 				img.children('img').eq(currentImg).addClass('is-active');
 				currentNav = $(this).index();
