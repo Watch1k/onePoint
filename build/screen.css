@@ -13584,7 +13584,7 @@ img {
 	 @mixin ================================== */
 .s12__swiper {
   position: absolute;
-  z-index: 1000;
+  z-index: 14;
   left: 50%;
   top: 45%;
   width: 600px;
