@@ -11,7 +11,7 @@
   <link rel="stylesheet" media="all" href="screen.css">
 </head>
 
-<body class="s4">
+<body id="s4" data-next-slide="five.html" data-prev-slide="three.html" class="s4">
   <div class="tutorial js-tutorial">
     <div class="tutorial__in"><img src="img/2/instruction.png">
       <div class="s2__nav js-nav">
@@ -35,14 +35,21 @@
     <div class="header__back js-tutorial-back"><svg class="icon icon-tutorial-back"><use xlink:href="img/sprite.svg#icon-tutorial-back"></use></svg></div>
     <div class="header__instruction js-instruction"><svg class="icon icon-settings"><use xlink:href="img/sprite.svg#icon-settings"></use></svg></div>
   </div>
-  <div class="wrapper">
+  <div class="s4__wrapper wrapper js-4-close">
     <div class="wrapper__in">
       <div class="text-left"><img src="img/4/text.png"></div>
       <div class="s4__controls text-left">
-        <div class="s4__btn btn btn_blue">ПЕРВЫЙ ВИЗИТ</div>
-        <div class="s4__btn btn btn_blue">ВТОРОЙ ВИЗИТ</div>
+        <div class="s4__btn btn btn_blue js-4-init">ПРИМЕР МЕНЮ</div>
       </div>
     </div>
+  </div>
+  <div class="s4__popup js-4-popup">
+    <div class="s4__popup-close js-4-close"><img src="img/4/close.png" srcset="img/4/close@2x.png 2x"></div>
+    <div data-next-slide="three" onclick="Android.openSlide('three.html')" class="s4__popup-link js-4-link"><img src="img/4/1.png" srcset="img/4/1@2x.png 2x"></div>
+    <div data-next-slide="six" onclick="Android.openSlide('six.html')" class="s4__popup-link js-4-link"><img src="img/4/2.png" srcset="img/4/2@2x.png 2x"></div>
+    <div data-next-slide="nine" onclick="Android.openSlide('nine.html')" class="s4__popup-link js-4-link"><img src="img/4/3.png" srcset="img/4/3@2x.png 2x"></div>
+    <div data-next-slide="ten" onclick="Android.openSlide('ten.html')" class="s4__popup-link js-4-link"><img src="img/4/4.png" srcset="img/4/4@2x.png 2x"></div>
+    <div data-next-slide="twelve" onclick="Android.openSlide('twelve.html')" class="s4__popup-link js-4-link"><img src="img/4/5.png" srcset="img/4/5@2x.png 2x"></div>
   </div>
   <div class="footer js-footer">
     <div class="footer__info js-info"><svg class="icon icon-instruction"><use xlink:href="img/sprite.svg#icon-instruction"></use></svg></div>

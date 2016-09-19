@@ -5,9 +5,10 @@ block tooltip
 block title
 	title 12
 block body
-	body.s12
+	body.s12#s12(data-next-slide='thirteen.html' data-prev-slide='eleven.html')
 		include includes/_tutorial
 		include includes/_header
+		#swiper.s12__swiper
 		.wrapper
 			.s12__in.wrapper__in
 				img.s12__title(src='img/12/title.png' srcset='img/12/title@2x.png 2x')

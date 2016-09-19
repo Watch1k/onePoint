@@ -5,15 +5,39 @@ block title
 	title 9
 block tooltip
 block body
-	body.s9
+	body.s9#s9(data-next-slide='ten.html' data-prev-slide='eight.html')
 		include includes/_tutorial
 		include includes/_header
 		.s9__wrapper.wrapper
 			img.s9__title(src='img/9/title.png' srcset='img/9/title@2x.png 2x')
-			.s9__tab.js-9-tab(tab-index='1')
-				img.s9__img(src='img/9/1.png' srcset='img/9/1@2x.png 2x')
-			.s9__tablet.js-9-tablet
-			.s9__range.js-9-range
+			.s9__lols
+				img.s9__lol.js-9-lol(src='img/9/tablet.png' srcset='img/9/tablet@2x.png' data-index='1')
+				img.s9__lol.js-9-lol(src='img/9/tablet-2.png' srcset='img/9/tablet-2@2x.png' data-index='2')
+				img.s9__lol.js-9-lol(src='img/9/tablet-3.png' srcset='img/9/tablet-3@2x.png' data-index='3')
+				img.s9__lol.js-9-lol(src='img/9/tablet-4.png' srcset='img/9/tablet-4@2x.png' data-index='4')
+				img.s9__lol.js-9-lol(src='img/9/tablet-5.png' srcset='img/9/tablet-5@2x.png' data-index='5')
+			.s9__shadows
+				img.s9__shadow.js-9-shadow(src='img/9/shadow.png' srcset='img/9/shadow@2x.png 2x')
+			.s9__tablets
+				img.s9__tablet.js-9-tablet(src='img/9/tablet.png' srcset='img/9/tablet@2x.png 2x' data-index='1')
+			.s9__tabs
+				.s9__tab.js-9-tab.is-active(data-index='1')
+					img.s9__img(src='img/9/1.png' srcset='img/9/1@2x.png 2x')
+				.s9__tab.js-9-tab(data-index='2')
+					img.s9__img(src='img/9/2.png' srcset='img/9/2@2x.png 2x')
+				.s9__tab.js-9-tab(data-index='3')
+					img.s9__img(src='img/9/3.png' srcset='img/9/3@2x.png 2x')
+				.s9__tab.js-9-tab(data-index='4')
+					img.s9__img(src='img/9/4.png' srcset='img/9/4@2x.png 2x')
+				.s9__tab.js-9-tab(data-index='5')
+					img.s9__img(src='img/9/5.png' srcset='img/9/5@2x.png 2x')
+			.s9__range
+				.s9__circle.is-active.js-9-circle(data-index='1')
+				.s9__circle.js-9-circle(data-index='2')
+				.s9__circle.js-9-circle(data-index='3')
+				.s9__circle.js-9-circle(data-index='4')
+				.s9__circle.js-9-circle(data-index='5')
+				.js-9-range
 		include includes/_footer
 	block js
 		script(src="app.js")
