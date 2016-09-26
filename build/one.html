@@ -6,26 +6,78 @@
   <title>1</title>
   <!--meta(name="viewport" content="width=device-width, initial-scale=1")-->
   <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=1280">
+  <meta name="viewport" content="width=2560">
   <meta name="viewport" content="initial-scale=2, user-scalable=no">
   <link rel="stylesheet" media="all" href="screen.css">
 </head>
 
-<body id="s1" data-next-slide="two.html" class="s1"><canvas class="canvas"></canvas>
-  <div class="s1__wrapper wrapper">
-    <div class="wrapper__in">
-      <div class="s1__slider js-1-slider">
-        <div class="s1__circle s1__circle_left js-1-circle">
-          <div class="s1__circle-in"></div>
-          <div class="s1__circle-in"></div>
-          <div class="s1__circle-in"></div>
+<body id="s1" data-prev-slide="fourteen.html" data-next-slide="two.html" class="s1">
+  <div class="container"><canvas class="canvas"></canvas>
+    <div class="s1__wrapper wrapper">
+      <div class="wrapper__in">
+        <div class="s1__slider js-1-slider">
+          <div class="s1__circle s1__circle_left js-1-circle">
+            <div class="s1__circle-in"></div>
+            <div class="s1__circle-in"></div>
+            <div class="s1__circle-in"></div>
+          </div>
+          <div class="s1__line js-1-line"></div>
+          <div class="s1__circle s1__circle_right"></div>
         </div>
-        <div class="s1__line js-1-line"></div>
-        <div class="s1__circle s1__circle_right"></div>
       </div>
     </div>
   </div>
 </body>
 <script src="app.js"></script>
+<script>
+  $(document).ready(function() {
+
+    /* Slide 1 */
+    (function() {
+      var slider = $('.js-1-slider'),
+        circle = $('.js-1-circle'),
+        line = $('.js-1-line');
+
+      disableSwipe();
+
+      $('body.s1').on('swipeleft', function() {
+        Android.openSlide($('body.s1').attr('data-next-slide'));
+      });
+      $('body.s1').on('swiperight', function() {
+        Android.openSlide($('body.s1').attr('data-prev-slide'));
+      });
+
+      circle.on('mouseup', function() {
+        $(this).animate({
+          'left': '0'
+        }, 500);
+        line.animate({
+          'left': 82
+        }, 500);
+      });
+
+      circle.draggable({
+        containment: slider,
+        axis: 'x',
+        drag: function(event, ui) {
+          line.css('left', 82 + ui.position.left);
+          if (ui.position.left > 420) {
+            circle.unbind();
+            circle.animate({
+              'left': 524
+            }, 200);
+            line.animate({
+              'left': 524
+            }, 200, function() {
+              Android.openSlide($('body.s1').attr('data-next-slide'))
+            });
+            return false;
+          }
+        }
+      });
+    })();
+
+  });
+</script>
 
 </html>

@@ -2,24 +2,47 @@ extend includes/_layout
 block title
 	title 2
 block body
-	body.s2#s2(data-next-slide='three.html')
-		.wrapper
-			.wrapper__in
-				img(src='img/2/instruction.png')
-				.s2__nav.js-nav
-					.s2__nav-link.is-active
-						.s2__nav-link-text Навигация
-					.s2__nav-link
-						.s2__nav-link-text Контент
-					.s2__nav-link
-						.s2__nav-link-text Подсказки
-				.s2__tab.is-active.js-tab(data-index='1')
-					img.s2__img(src='img/2/slide-1.png')
-				.s2__tab.js-tab(data-index='2')
-					img.s2__img(src='img/2/slide-2.png')
-				.s2__tab.js-tab(data-index='3')
-					img.s2__img(src='img/2/slide-3.png')
-				.s2__btn.js-2-btn
-					.btn Продолжить
+	body.s2#s2(data-prev-slide='one.html' data-next-slide='three.html')
+		.container
+			.wrapper
+				.wrapper__in
+					img(src='img/2/instruction.png')
+					.s2__nav.js-nav
+						.s2__nav-link.is-active
+							.s2__nav-link-text Навигация
+						.s2__nav-link
+							.s2__nav-link-text Контент
+						.s2__nav-link
+							.s2__nav-link-text Подсказки
+					.s2__tab.is-active.js-tab(data-index='1')
+						img.s2__img(src='img/2/slide-1.png')
+					.s2__tab.js-tab(data-index='2')
+						img.s2__img(src='img/2/slide-2.png')
+					.s2__tab.js-tab(data-index='3')
+						img.s2__img(src='img/2/slide-3.png')
+					.s2__btn.js-2-btn
+						.btn Продолжить
 	block js
 		script(src="app.js")
+		script.
+			$(document).ready(function () {
+				/* Slide 2 */
+				(function () {
+					var btn = $('.js-2-btn');
+
+					disableSwipe();
+
+					$('body.s2').on('swipeleft', function () {
+						Android.openSlide($('body.s2').attr('data-next-slide'));
+					});
+					$('body.s2').on('swiperight', function () {
+						Android.openSlide($('body.s2').attr('data-prev-slide'));
+					});
+
+					if ($('body').hasClass('s2')) {
+						btn.on('click', function () {
+							Android.openSlide($('body.s2').attr('data-next-slide'))
+						});
+					}
+				})();
+			});

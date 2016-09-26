@@ -6,34 +6,59 @@
   <title>2</title>
   <!--meta(name="viewport" content="width=device-width, initial-scale=1")-->
   <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=1280">
+  <meta name="viewport" content="width=2560">
   <meta name="viewport" content="initial-scale=2, user-scalable=no">
   <link rel="stylesheet" media="all" href="screen.css">
 </head>
 
-<body id="s2" data-next-slide="three.html" class="s2">
-  <div class="wrapper">
-    <div class="wrapper__in"><img src="img/2/instruction.png">
-      <div class="s2__nav js-nav">
-        <div class="s2__nav-link is-active">
-          <div class="s2__nav-link-text">Навигация</div>
+<body id="s2" data-prev-slide="one.html" data-next-slide="three.html" class="s2">
+  <div class="container">
+    <div class="wrapper">
+      <div class="wrapper__in"><img src="img/2/instruction.png">
+        <div class="s2__nav js-nav">
+          <div class="s2__nav-link is-active">
+            <div class="s2__nav-link-text">Навигация</div>
+          </div>
+          <div class="s2__nav-link">
+            <div class="s2__nav-link-text">Контент</div>
+          </div>
+          <div class="s2__nav-link">
+            <div class="s2__nav-link-text">Подсказки</div>
+          </div>
         </div>
-        <div class="s2__nav-link">
-          <div class="s2__nav-link-text">Контент</div>
+        <div data-index="1" class="s2__tab is-active js-tab"><img src="img/2/slide-1.png" class="s2__img"></div>
+        <div data-index="2" class="s2__tab js-tab"><img src="img/2/slide-2.png" class="s2__img"></div>
+        <div data-index="3" class="s2__tab js-tab"><img src="img/2/slide-3.png" class="s2__img"></div>
+        <div class="s2__btn js-2-btn">
+          <div class="btn">Продолжить</div>
         </div>
-        <div class="s2__nav-link">
-          <div class="s2__nav-link-text">Подсказки</div>
-        </div>
-      </div>
-      <div data-index="1" class="s2__tab is-active js-tab"><img src="img/2/slide-1.png" class="s2__img"></div>
-      <div data-index="2" class="s2__tab js-tab"><img src="img/2/slide-2.png" class="s2__img"></div>
-      <div data-index="3" class="s2__tab js-tab"><img src="img/2/slide-3.png" class="s2__img"></div>
-      <div class="s2__btn js-2-btn">
-        <div class="btn">Продолжить</div>
       </div>
     </div>
   </div>
 </body>
 <script src="app.js"></script>
+<script>
+  $(document).ready(function() {
+    /* Slide 2 */
+    (function() {
+      var btn = $('.js-2-btn');
+
+      disableSwipe();
+
+      $('body.s2').on('swipeleft', function() {
+        Android.openSlide($('body.s2').attr('data-next-slide'));
+      });
+      $('body.s2').on('swiperight', function() {
+        Android.openSlide($('body.s2').attr('data-prev-slide'));
+      });
+
+      if ($('body').hasClass('s2')) {
+        btn.on('click', function() {
+          Android.openSlide($('body.s2').attr('data-next-slide'))
+        });
+      }
+    })();
+  });
+</script>
 
 </html>

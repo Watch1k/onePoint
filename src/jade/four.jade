@@ -6,27 +6,55 @@ block title
 	title 4
 block body
 	body.s4#s4(data-next-slide='five.html' data-prev-slide='three.html')
-		include includes/_tutorial
-		include includes/_header
-		.s4__wrapper.wrapper.js-4-close
-			.wrapper__in
-				.text-left
-					img(src='img/4/text.png')
-				.s4__controls.text-left
-					.s4__btn.btn.btn_blue.js-4-init ПРИМЕР МЕНЮ
-		.s4__popup.js-4-popup
-			.s4__popup-close.js-4-close
-				img(src='img/4/close.png' srcset='img/4/close@2x.png 2x')
-			.s4__popup-link.js-4-link(data-next-slide='three' onclick="Android.openSlide('three.html')")
-				img(src='img/4/1.png' srcset='img/4/1@2x.png 2x')
-			.s4__popup-link.js-4-link(data-next-slide='six' onclick="Android.openSlide('six.html')")
-				img(src='img/4/2.png' srcset='img/4/2@2x.png 2x')
-			.s4__popup-link.js-4-link(data-next-slide='nine' onclick="Android.openSlide('nine.html')")
-				img(src='img/4/3.png' srcset='img/4/3@2x.png 2x')
-			.s4__popup-link.js-4-link(data-next-slide='ten' onclick="Android.openSlide('ten.html')")
-				img(src='img/4/4.png' srcset='img/4/4@2x.png 2x')
-			.s4__popup-link.js-4-link(data-next-slide='twelve' onclick="Android.openSlide('twelve.html')")
-				img(src='img/4/5.png' srcset='img/4/5@2x.png 2x')
-		include includes/_footer
+		.container
+			include includes/_tutorial
+			include includes/_header
+			.s4__wrapper.wrapper.js-4-close
+				.wrapper__in
+					.text-left
+						img(src='img/4/text.png')
+					.s4__controls.text-left
+						.s4__btn.btn.btn_blue.js-4-init ПРИМЕР МЕНЮ
+			.s4__popup.js-4-popup
+				.s4__popup-close.js-4-close
+					img(src='img/4/close.png' srcset='img/4/close@2x.png 2x')
+				.s4__popup-link.js-4-link(data-next-slide='three' onclick="Android.openSlide('three.html')")
+					img(src='img/4/1.png' srcset='img/4/1@2x.png 2x')
+				.s4__popup-link.js-4-link(data-next-slide='six' onclick="Android.openSlide('six.html')")
+					img(src='img/4/2.png' srcset='img/4/2@2x.png 2x')
+				.s4__popup-link.js-4-link(data-next-slide='nine' onclick="Android.openSlide('nine.html')")
+					img(src='img/4/3.png' srcset='img/4/3@2x.png 2x')
+				.s4__popup-link.js-4-link(data-next-slide='ten' onclick="Android.openSlide('ten.html')")
+					img(src='img/4/4.png' srcset='img/4/4@2x.png 2x')
+				.s4__popup-link.js-4-link(data-next-slide='twelve' onclick="Android.openSlide('twelve.html')")
+					img(src='img/4/5.png' srcset='img/4/5@2x.png 2x')
+			include includes/_footer
 	block js
 		script(src="app.js")
+		script.
+			$(document).ready(function () {
+				/* Slide 4 */
+				(function () {
+					var close = $('.js-4-close'),
+									init = $('.js-4-init'),
+									popup = $('.js-4-popup');
+
+					disableSwipe();
+
+					$('body.s4').on('swipeleft', function () {
+						Android.openSlide($('body.s4').attr('data-next-slide'));
+					});
+					$('body.s4').on('swiperight', function () {
+						Android.openSlide($('body.s4').attr('data-prev-slide'));
+					});
+
+					init.on('click', function (e) {
+						e.stopPropagation();
+						popup.addClass('is-active');
+					});
+
+					close.on('click', function () {
+						popup.removeClass('is-active');
+					});
+				})();
+			});

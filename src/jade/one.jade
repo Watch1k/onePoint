@@ -2,16 +2,58 @@ extend includes/_layout
 block title
 	title 1
 block body
-	body.s1#s1(data-next-slide='two.html')
-		canvas.canvas
-		.s1__wrapper.wrapper
-			.wrapper__in
-				.s1__slider.js-1-slider
-					.s1__circle.s1__circle_left.js-1-circle
-						.s1__circle-in
-						.s1__circle-in
-						.s1__circle-in
-					.s1__line.js-1-line
-					.s1__circle.s1__circle_right
+	body.s1#s1(data-prev-slide='fourteen.html' data-next-slide='two.html')
+		.container
+			canvas.canvas
+			.s1__wrapper.wrapper
+				.wrapper__in
+					.s1__slider.js-1-slider
+						.s1__circle.s1__circle_left.js-1-circle
+							.s1__circle-in
+							.s1__circle-in
+							.s1__circle-in
+						.s1__line.js-1-line
+						.s1__circle.s1__circle_right
 	block js
 		script(src="app.js")
+		script.
+			$(document).ready(function () {
+
+				/* Slide 1 */
+				(function () {
+					var slider = $('.js-1-slider'),
+									circle = $('.js-1-circle'),
+									line = $('.js-1-line');
+
+					disableSwipe();
+
+					$('body.s1').on('swipeleft', function () {
+						Android.openSlide($('body.s1').attr('data-next-slide'));
+					});
+					$('body.s1').on('swiperight', function () {
+						Android.openSlide($('body.s1').attr('data-prev-slide'));
+					});
+
+					circle.on('mouseup', function () {
+						$(this).animate({'left': '0'}, 500);
+						line.animate({'left': 82}, 500);
+					});
+
+					circle.draggable({
+						containment: slider,
+						axis: 'x',
+						drag: function (event, ui) {
+							line.css('left', 82 + ui.position.left);
+							if (ui.position.left > 420) {
+								circle.unbind();
+								circle.animate({'left': 524}, 200);
+								line.animate({'left': 524}, 200, function () {
+									Android.openSlide($('body.s1').attr('data-next-slide'))
+								});
+								return false;
+							}
+						}
+					});
+				})();
+
+			});

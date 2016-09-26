@@ -6,24 +6,100 @@ block title
 block tooltip
 block body
 	body.s11#s11(data-next-slide='twelve.html' data-prev-slide='ten.html')
-		include includes/_tutorial
-		include includes/_header
-		.s11__wrapper.wrapper
-			.wrapper__in
-				.s11__row
-					img.s11__title(src='img/11/title.png' srcset='img/11/title@2x.png 2x')
-				#spinner1.s11__spinner.spinner
-					strong.spinner__text
-					img.s11__img(src='img/11/1.png' srcset='img/11/1@2x.png 2x')
-				#spinner2.s11__spinner.spinner
-					strong.spinner__text
-					img.s11__img(src='img/11/2.png' srcset='img/11/2@2x.png 2x')
-				#spinner3.s11__spinner.spinner
-					strong.spinner__text
-					img.s11__img(src='img/11/3.png' srcset='img/11/3@2x.png 2x')
-				#spinner4.s11__spinner.spinner
-					strong.spinner__text
-					img.s11__img(src='img/11/4.png' srcset='img/11/4@2x.png 2x')
-		include includes/_footer
+		.container
+			include includes/_tutorial
+			include includes/_header
+			.s11__wrapper.wrapper
+				.wrapper__in
+					.s11__row
+						img.s11__title(src='img/11/title.png' srcset='img/11/title@2x.png 2x')
+					#spinner1.s11__spinner.spinner
+						strong.spinner__text
+						img.s11__img(src='img/11/1.png' srcset='img/11/1@2x.png 2x')
+					#spinner2.s11__spinner.spinner
+						strong.spinner__text
+						img.s11__img(src='img/11/2.png' srcset='img/11/2@2x.png 2x')
+					#spinner3.s11__spinner.spinner
+						strong.spinner__text
+						img.s11__img(src='img/11/3.png' srcset='img/11/3@2x.png 2x')
+					#spinner4.s11__spinner.spinner
+						strong.spinner__text
+						img.s11__img(src='img/11/4.png' srcset='img/11/4@2x.png 2x')
+			include includes/_footer
 	block js
 		script(src="app.js")
+		script.
+			$(document).ready(function () {
+				/* Slide 11 */
+				(function () {
+					var spinner1 = $('#spinner1'),
+									spinner2 = $('#spinner2'),
+									spinner3 = $('#spinner3'),
+									spinner4 = $('#spinner4');
+
+					disableSwipe();
+
+					$('body.s11').on('swipeleft', function () {
+						Android.openSlide($('body.s11').attr('data-next-slide'));
+					});
+					$('body.s11').on('swiperight', function () {
+						Android.openSlide($('body.s11').attr('data-prev-slide'));
+					});
+
+					if (spinner1.length) {
+						spinner1.circleProgress({
+							size: 220,
+							thickness: 13,
+							value: 0.9,
+							lineCap: 'round',
+							startAngle: -Math.PI / 2,
+							fill: {gradient: ['#F48F00', '#F36039']},
+							animation: {duration: 3000, easing: "swing"}
+						}).on('circle-animation-progress', function (event, progress) {
+							$(this).find('strong').html(parseInt(90 * progress) + '<span>%</span>');
+						});
+					}
+
+					if (spinner2.length) {
+						spinner2.circleProgress({
+							size: 220,
+							thickness: 13,
+							value: 0.88,
+							lineCap: 'round',
+							startAngle: -Math.PI / 2,
+							fill: {gradient: ['#F48F00', '#F36039']},
+							animation: {duration: 3000, easing: "swing"}
+						}).on('circle-animation-progress', function (event, progress) {
+							$(this).find('strong').html(parseInt(88 * progress) + '<span>%</span>');
+						});
+					}
+
+					if (spinner3.length) {
+						spinner3.circleProgress({
+							size: 220,
+							thickness: 13,
+							value: 0.38,
+							lineCap: 'round',
+							startAngle: -Math.PI / 2,
+							fill: {gradient: ['#F48F00', '#F36039']},
+							animation: {duration: 3000, easing: "swing"}
+						}).on('circle-animation-progress', function (event, progress) {
+							$(this).find('strong').html(parseInt(38 * progress) + '<span>%</span>');
+						});
+					}
+
+					if (spinner4.length) {
+						spinner4.circleProgress({
+							size: 220,
+							thickness: 13,
+							value: 0.93,
+							lineCap: 'round',
+							startAngle: -Math.PI / 2,
+							fill: {gradient: ['#F48F00', '#F36039']},
+							animation: {duration: 3000, easing: "swing"}
+						}).on('circle-animation-progress', function (event, progress) {
+							$(this).find('strong').html(parseInt(93 * progress) + '<span>%</span>');
+						});
+					}
+				})();
+			});

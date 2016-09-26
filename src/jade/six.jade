@@ -6,25 +6,120 @@ block title
 	title 6
 block body
 	body.s6#s6(data-next-slide='seven.html' data-prev-slide='five.html')
-		include includes/_tutorial
-		include includes/_header
-		.wrapper
-			.s6__wrapper-in.wrapper__in
-				img.s6__title.js-6-title(src='img/6/title.png' srcset='img/6/title@2x.png 2x')
-				.s6__slider.js-6-slider
-					.s6__slider-item
-						img.s6__slider-img(src='img/6/1.png' srcset='img/6/1@2x.png 2x')
-					.s6__slider-item
-						img.s6__slider-img(src='img/6/2.png' srcset='img/6/2@2x.png 2x')
-					.s6__slider-item
-						img.s6__slider-img(src='img/6/3.png' srcset='img/6/3@2x.png 2x')
-					.s6__slider-item
-						img.s6__slider-img(src='img/6/4.png' srcset='img/6/4@2x.png 2x')
-					.s6__slider-item
-						img.s6__slider-img(src='img/6/5.png' srcset='img/6/5@2x.png 2x')
-					.s6__slider-item
-						img.s6__slider-img(src='img/6/6.png' srcset='img/6/6@2x.png 2x')
-				.s6__range.js-6-range
-		include includes/_footer
+		.container
+			.back.js-back
+				+i('back')
+			include includes/_tutorial
+			include includes/_header
+			.wrapper
+				.s6__wrapper-in.wrapper__in
+					img.s6__title.js-6-title(src='img/6/title.png' srcset='img/6/title@2x.png 2x')
+					.s6__slider.js-6-slider
+						.s6__slider-item
+							img.s6__slider-img(src='img/6/1.png' srcset='img/6/1@2x.png 2x')
+						.s6__slider-item
+							img.s6__slider-img(src='img/6/2.png' srcset='img/6/2@2x.png 2x')
+						.s6__slider-item
+							img.s6__slider-img(src='img/6/3.png' srcset='img/6/3@2x.png 2x')
+						.s6__slider-item
+							img.s6__slider-img(src='img/6/4.png' srcset='img/6/4@2x.png 2x')
+						.s6__slider-item
+							img.s6__slider-img(src='img/6/5.png' srcset='img/6/5@2x.png 2x')
+						.s6__slider-item
+							img.s6__slider-img(src='img/6/6.png' srcset='img/6/6@2x.png 2x')
+					.s6__range.js-6-range
+			include includes/_footer
 	block js
 		script(src="app.js")
+		script.
+			$(document).ready(function () {
+				/* Slide 6 */
+				(function () {
+					var slider = $('.js-6-slider'),
+									title = $('.js-6-title'),
+									range = $('.js-6-range'),
+									rangeIndex = 1;
+
+					disableSwipe();
+
+					$('body.s6').on('swipeleft', function () {
+						Android.openSlide($('body.s6').attr('data-next-slide'));
+					});
+					$('body.s6').on('swiperight', function () {
+						Android.openSlide($('body.s6').attr('data-prev-slide'));
+					});
+
+					slider.slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						arrows: false,
+						dots: false,
+						vertical: true,
+						verticalSwiping: true
+					});
+
+					slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+						if (currentSlide != nextSlide) {
+							title.fadeOut(50);
+						}
+						if (nextSlide + 1 != rangeIndex) {
+							rangeIndex = nextSlide + 1;
+							if (nextSlide == 0) {
+								range.slider('value', 2);
+							}
+							if (nextSlide == 1) {
+								range.slider('value', 8);
+							}
+							if (nextSlide == 2) {
+								range.slider('value', 14);
+							}
+							if (nextSlide == 3) {
+								range.slider('value', 20);
+							}
+							if (nextSlide == 4) {
+								range.slider('value', 26);
+							}
+							if (nextSlide == 5) {
+								range.slider('value', 33);
+							}
+						}
+					});
+					slider.on('afterChange', function (event, slick, currentSlde) {
+						title.fadeIn();
+					});
+
+					range.slider({
+						orientation: "vertical",
+						range: "min",
+						min: 0,
+						max: 33,
+						value: 2,
+						change: function (event, ui) {
+							if (ui.value < 8) {
+								rangeIndex = 1;
+								slider.slick('slickGoTo', '0', false);
+							}
+							if (7 < ui.value && ui.value < 14) {
+								rangeIndex = 2;
+								slider.slick('slickGoTo', '1', false);
+							}
+							if (13 < ui.value && ui.value < 20) {
+								rangeIndex = 3;
+								slider.slick('slickGoTo', '2', false);
+							}
+							if (19 < ui.value && ui.value < 26) {
+								rangeIndex = 4;
+								slider.slick('slickGoTo', '3', false);
+							}
+							if (25 < ui.value && ui.value < 32) {
+								rangeIndex = 5;
+								slider.slick('slickGoTo', '4', false);
+							}
+							if (31 < ui.value) {
+								rangeIndex = 6;
+								slider.slick('slickGoTo', '5', false);
+							}
+						}
+					});
+				})();
+			});

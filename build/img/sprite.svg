@@ -10,6 +10,20 @@
         Fill 4
     </title>
     <path d="M8.68.772L0 9.452h3.273v9.57H13.94v-9.57h3.418z" fill-rule="evenodd"/>
+</symbol><symbol id="icon-back" viewBox="0 0 227 32">
+    <title>
+        back
+    </title>
+    <g fill-rule="evenodd">
+        <g stroke="#7E8C9B" stroke-width="2" stroke-linecap="square">
+            <path d="M3.5 15h22.986"/>
+            <path d="M2 15l6 6"/>
+            <path d="M2 15l6-6"/>
+        </g>
+        <text font-family="Roboto-Regular, Roboto" font-size="14" fill="#7E8C9B" transform="translate(1 -5)">
+            <tspan x="42" y="15">&#x41A; &#x43F;&#x440;&#x43E;&#x441;&#x43C;&#x43E;&#x442;&#x440;&#x443;</tspan> <tspan x="42" y="34">&#x441;&#x446;&#x435;&#x43D;&#x430;&#x440;&#x43D;&#x43E;&#x439; &#x442;&#x430;&#x43A;&#x442;&#x438;&#x43A;&#x438; &#x432;&#x438;&#x437;&#x438;&#x442;&#x43E;&#x432;</tspan>
+        </text>
+    </g>
 </symbol><symbol id="icon-instruction" viewBox="0 0 11 21">
     <title>
         Shape

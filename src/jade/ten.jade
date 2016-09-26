@@ -6,81 +6,123 @@ block title
 	title 10
 block body
 	body.s10#s10(data-next-slide='eleven.html' data-prev-slide='nine.html')
-		include includes/_tutorial
-		include includes/_header
-		.wrapper
-			.wrapper__in.text-left
-				.s10__nav-wrap
-					.s10__nav.js-nav
-						.s10__nav-link.is-active
-							.s10__nav-link-text Пример 1
-						.s10__nav-link
-							.s10__nav-link-text Пример 2
-						.s10__nav-link.js-10-fix-2
-							.s10__nav-link-text Пример 3
+		.container
+			.back.js-back
+				+i('back')
+			include includes/_tutorial
+			include includes/_header
+			.wrapper
+				.wrapper__in.text-left
+					.s10__nav-wrap
+						.s10__nav.js-nav
+							.s10__nav-link.is-active
+								.s10__nav-link-text Пример 1
+							.s10__nav-link
+								.s10__nav-link-text Пример 2
+							.s10__nav-link.js-10-fix-2
+								.s10__nav-link-text Пример 3
 
-				.row
-					.s10__col.s10__padding
-						img.s10__title(src='img/10/title.png' srcset='img/10/title@2x.png 2x')
-
-				.s10__tab.is-active.js-tab(data-index='1')
 					.row
-						.s10__col.s10__text.js-10-text
-							img.s10__img(src='img/10/1.png' srcset='img/10/1@2x.png 2x')
-							img.s10__img(src='img/10/1_2.png' srcset='img/10/1_2@2x.png 2x')
-						.s10__col.s10__col_1.rel
-							img.s10__img.s10__img_1.js-10-img(src='img/10/1-0.png' srcset='img/10/1-0@2x.png 2x')
-							img.s10__shadow-1.js-10-shadow-1(src='img/10/shadow.png' srcset='img/10/shadow@2x.png 2x')
-							.s10__box.s10__box_1
-								img.s10__img-1(src='img/10/1-1.png' srcset='img/10/1-1@2x.png 2x')
-							.s10__box.s10__box_2
-								img.s10__img-2(src='img/10/1-2.png' srcset='img/10/1-2@2x.png 2x')
-							.s10__box.s10__box_3
-								img.s10__img-3(src='img/10/1-3.png' srcset='img/10/1-3@2x.png 2x')
-							.s10__box.s10__box_4
-								img.s10__img-4(src='img/10/1-4.png' srcset='img/10/1-4@2x.png 2x')
-							.s10__box.s10__box_5
-								img.s10__img-5(src='img/10/1-5.png' srcset='img/10/1-5@2x.png 2x')
-							.s10__btn.s10__btn_1.plus-btn.js-plus-btn.js-10-btn-1
-								.plus-btn__text.plus-btn__text_plus
+						.s10__col.s10__padding
+							img.s10__title(src='img/10/title.png' srcset='img/10/title@2x.png 2x')
 
-				.s10__tab.js-tab(data-index='2')
-					.s10__col.s10__text.js-10-text
-						img.s10__img(src='img/10/2.png' srcset='img/10/2@2x.png 2x')
-						img.s10__img(src='img/10/2_2.png' srcset='img/10/2_2@2x.png 2x')
-					.s10__col.s10__col_1.rel.text-center
-						img.s10__img.s10__img_2.js-10-img(src='img/10/2-0.png' srcset='img/10/2-0@2x.png 2x')
-						img.s10__img-tab-2-1.js-10-img-toggle(src='img/10/2-1.png' srcset='img/10/2-1@2x.png 2x')
-						img.s10__img-tab-2-2.js-10-img-toggle(src='img/10/2-2.png' srcset='img/10/2-2@2x.png 2x')
-				.s10__tab.js-tab(data-index='3')
-					.s10__col.s10__text
-						img.s10__img(src='img/10/3.png' srcset='img/10/3@2x.png 2x')
-					.s10__col.s10__col_3.rel.text-center
-						img.s10__img.s10__img_3.s10__img_3-1(src='img/10/3-0.png' srcset='img/10/3-0@2x.png 2x')
-						img.s10__img-bg.s10__img-bg_1(src='img/10/bg-1.png' srcset='img/10/bg-1@2x.png 2x')
-						img.s10__img-bg.s10__img-bg_2(src='img/10/bg-2.png' srcset='img/10/bg-2@2x.png 2x')
-						img.s10__img-bg.s10__img-bg_3(src='img/10/bg-3.png' srcset='img/10/bg-3@2x.png 2x')
-						img.s10__img-bg.s10__img-bg_4(src='img/10/bg-4.png' srcset='img/10/bg-4@2x.png 2x')
-						img.s10__img-bg.s10__img-bg_5(src='img/10/bg-5.png' srcset='img/10/bg-5@2x.png 2x')
-						img.s10__img-bg.s10__img-bg_6(src='img/10/bg-6.png' srcset='img/10/bg-6@2x.png 2x')
-						img.s10__img-bg.s10__img-bg_7(src='img/10/bg-7.png' srcset='img/10/bg-7@2x.png 2x')
-						img.s10__img-bg.s10__img-bg_8(src='img/10/bg-8.png' srcset='img/10/bg-8@2x.png 2x')
-						img.s10__img.s10__img_3.s10__img_3-2(src='img/10/3-1.png' srcset='img/10/3-1@2x.png 2x')
-						img.s10__img-bg-2.s10__img-bg-2_9(src='img/10/bg-9.png' srcset='img/10/bg-9@2x.png 2x')
-						img.s10__img-bg-2.s10__img-bg-2_10(src='img/10/bg-10.png' srcset='img/10/bg-10@2x.png 2x')
-						img.s10__img-bg-2.s10__img-bg-2_11(src='img/10/bg-11.png' srcset='img/10/bg-11@2x.png 2x')
-						img.s10__img-bg-2.s10__img-bg-2_12(src='img/10/bg-12.png' srcset='img/10/bg-12@2x.png 2x')
-						img.s10__img-bg-3.s10__img-bg-3_13(src='img/10/bg-13.png' srcset='img/10/bg-13@2x.png 2x')
-						img.s10__img-bg-3.s10__img-bg-3_14(src='img/10/bg-14.png' srcset='img/10/bg-14@2x.png 2x')
-						img.s10__img-bg-3.s10__img-bg-3_15(src='img/10/bg-15.png' srcset='img/10/bg-15@2x.png 2x')
-						img.s10__img-bg-3.s10__img-bg-3_16(src='img/10/bg-16.png' srcset='img/10/bg-16@2x.png 2x')
-						img.s10__img-bg-3.s10__img-bg-3_17(src='img/10/bg-17.png' srcset='img/10/bg-17@2x.png 2x')
-						img.s10__img-bg-3.s10__img-bg-3_18(src='img/10/bg-18.png' srcset='img/10/bg-18@2x.png 2x')
-						img.s10__img-bg-3.s10__img-bg-3_19(src='img/10/bg-19.png' srcset='img/10/bg-19@2x.png 2x')
-						img.s10__img-bg-3.s10__img-bg-3_20(src='img/10/bg-20.png' srcset='img/10/bg-20@2x.png 2x')
-						img.s10__img.s10__img_3.s10__img_3-3(src='img/10/3-2.png' srcset='img/10/3-2@2x.png 2x')
-						img.s10__img-bg-4.s10__img-bg-4_21(src='img/10/bg-21.png' srcset='img/10/bg-21@2x.png 2x')
-						img.s10__img.s10__img_3.s10__img_3-4.js-10-fix(src='img/10/3-3.png' srcset='img/10/3-3@2x.png 2x')
-		include includes/_footer
+					.s10__tab.is-active.js-tab(data-index='1')
+						.row
+							.s10__col.s10__text.js-10-text
+								img.s10__img(src='img/10/1.png' srcset='img/10/1@2x.png 2x')
+								img.s10__img(src='img/10/1_2.png' srcset='img/10/1_2@2x.png 2x')
+							.s10__col.s10__col_1.rel
+								img.s10__img.s10__img_1.js-10-img(src='img/10/1-0.png' srcset='img/10/1-0@2x.png 2x')
+								img.s10__shadow-1.js-10-shadow-1(src='img/10/shadow.png' srcset='img/10/shadow@2x.png 2x')
+								.s10__box.s10__box_1
+									img.s10__img-1(src='img/10/1-1.png' srcset='img/10/1-1@2x.png 2x')
+								.s10__box.s10__box_2
+									img.s10__img-2(src='img/10/1-2.png' srcset='img/10/1-2@2x.png 2x')
+								.s10__box.s10__box_3
+									img.s10__img-3(src='img/10/1-3.png' srcset='img/10/1-3@2x.png 2x')
+								.s10__box.s10__box_4
+									img.s10__img-4(src='img/10/1-4.png' srcset='img/10/1-4@2x.png 2x')
+								.s10__box.s10__box_5
+									img.s10__img-5(src='img/10/1-5.png' srcset='img/10/1-5@2x.png 2x')
+								.s10__btn.s10__btn_1.plus-btn.js-plus-btn.js-10-btn-1
+									.plus-btn__text.plus-btn__text_plus
+
+					.s10__tab.js-tab(data-index='2')
+						.s10__col.s10__text.js-10-text
+							img.s10__img(src='img/10/2.png' srcset='img/10/2@2x.png 2x')
+							img.s10__img(src='img/10/2_2.png' srcset='img/10/2_2@2x.png 2x')
+						.s10__col.s10__col_1.rel.text-center
+							img.s10__img.s10__img_2.js-10-img(src='img/10/2-0.png' srcset='img/10/2-0@2x.png 2x')
+							img.s10__img-tab-2-1.js-10-img-toggle(src='img/10/2-1.png' srcset='img/10/2-1@2x.png 2x')
+							img.s10__img-tab-2-2.js-10-img-toggle(src='img/10/2-2.png' srcset='img/10/2-2@2x.png 2x')
+					.s10__tab.js-tab(data-index='3')
+						.s10__col.s10__text
+							img.s10__img(src='img/10/3.png' srcset='img/10/3@2x.png 2x')
+						.s10__col.s10__col_3.rel.text-center
+							img.s10__img.s10__img_3.s10__img_3-1(src='img/10/3-0.png' srcset='img/10/3-0@2x.png 2x')
+							img.s10__img-bg.s10__img-bg_1(src='img/10/bg-1.png' srcset='img/10/bg-1@2x.png 2x')
+							img.s10__img-bg.s10__img-bg_2(src='img/10/bg-2.png' srcset='img/10/bg-2@2x.png 2x')
+							img.s10__img-bg.s10__img-bg_3(src='img/10/bg-3.png' srcset='img/10/bg-3@2x.png 2x')
+							img.s10__img-bg.s10__img-bg_4(src='img/10/bg-4.png' srcset='img/10/bg-4@2x.png 2x')
+							img.s10__img-bg.s10__img-bg_5(src='img/10/bg-5.png' srcset='img/10/bg-5@2x.png 2x')
+							img.s10__img-bg.s10__img-bg_6(src='img/10/bg-6.png' srcset='img/10/bg-6@2x.png 2x')
+							img.s10__img-bg.s10__img-bg_7(src='img/10/bg-7.png' srcset='img/10/bg-7@2x.png 2x')
+							img.s10__img-bg.s10__img-bg_8(src='img/10/bg-8.png' srcset='img/10/bg-8@2x.png 2x')
+							img.s10__img.s10__img_3.s10__img_3-2(src='img/10/3-1.png' srcset='img/10/3-1@2x.png 2x')
+							img.s10__img-bg-2.s10__img-bg-2_9(src='img/10/bg-9.png' srcset='img/10/bg-9@2x.png 2x')
+							img.s10__img-bg-2.s10__img-bg-2_10(src='img/10/bg-10.png' srcset='img/10/bg-10@2x.png 2x')
+							img.s10__img-bg-2.s10__img-bg-2_11(src='img/10/bg-11.png' srcset='img/10/bg-11@2x.png 2x')
+							img.s10__img-bg-2.s10__img-bg-2_12(src='img/10/bg-12.png' srcset='img/10/bg-12@2x.png 2x')
+							img.s10__img-bg-3.s10__img-bg-3_13(src='img/10/bg-13.png' srcset='img/10/bg-13@2x.png 2x')
+							img.s10__img-bg-3.s10__img-bg-3_14(src='img/10/bg-14.png' srcset='img/10/bg-14@2x.png 2x')
+							img.s10__img-bg-3.s10__img-bg-3_15(src='img/10/bg-15.png' srcset='img/10/bg-15@2x.png 2x')
+							img.s10__img-bg-3.s10__img-bg-3_16(src='img/10/bg-16.png' srcset='img/10/bg-16@2x.png 2x')
+							img.s10__img-bg-3.s10__img-bg-3_17(src='img/10/bg-17.png' srcset='img/10/bg-17@2x.png 2x')
+							img.s10__img-bg-3.s10__img-bg-3_18(src='img/10/bg-18.png' srcset='img/10/bg-18@2x.png 2x')
+							img.s10__img-bg-3.s10__img-bg-3_19(src='img/10/bg-19.png' srcset='img/10/bg-19@2x.png 2x')
+							img.s10__img-bg-3.s10__img-bg-3_20(src='img/10/bg-20.png' srcset='img/10/bg-20@2x.png 2x')
+							img.s10__img.s10__img_3.s10__img_3-3(src='img/10/3-2.png' srcset='img/10/3-2@2x.png 2x')
+							img.s10__img-bg-4.s10__img-bg-4_21(src='img/10/bg-21.png' srcset='img/10/bg-21@2x.png 2x')
+							img.s10__img.s10__img_3.s10__img_3-4.js-10-fix(src='img/10/3-3.png' srcset='img/10/3-3@2x.png 2x')
+			include includes/_footer
 	block js
 		script(src="app.js")
+		script.
+			$(document).ready(function () {
+				/* Slide 10 */
+				(function () {
+					var btn1 = $('.js-10-btn-1'),
+									img = $('.js-10-img'),
+									imgToggle = $('.js-10-img-toggle'),
+									shadow1 = $('.js-10-shadow-1'),
+									text = $('.js-10-text'),
+									fix = $('.js-10-fix'),
+									fix2 = $('.js-10-fix-2');
+
+					disableSwipe();
+
+					$('body.s10').on('swipeleft', function () {
+						Android.openSlide($('body.s10').attr('data-next-slide'));
+					});
+					$('body.s10').on('swiperight', function () {
+						Android.openSlide($('body.s10').attr('data-prev-slide'));
+					});
+
+					fix2.on('click', function () {
+						fix.stop().css('opacity', '1').animate({'opacity': 0}, 12000);
+					});
+
+					btn1.on('click', function () {
+						$(this).siblings('.s10__box').toggleClass('is-active').children('img').toggleClass('is-active');
+						$(this).siblings().filter(img).toggleClass('is-active');
+						shadow1.toggleClass('is-active');
+						//text
+						$(this).parent().siblings().filter(text).children().toggle();
+					});
+
+					setInterval(function () {
+						imgToggle.eq(0).fadeToggle();
+						imgToggle.eq(1).fadeToggle();
+					}, 5000);
+				})();
+			});

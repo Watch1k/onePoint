@@ -6,54 +6,82 @@
   <title>8</title>
   <!--meta(name="viewport" content="width=device-width, initial-scale=1")-->
   <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=1280">
+  <meta name="viewport" content="width=2560">
   <meta name="viewport" content="initial-scale=2, user-scalable=no">
   <link rel="stylesheet" media="all" href="screen.css">
 </head>
 
 <body id="s8" data-next-slide="nine.html" data-prev-slide="seven.html" class="s8">
-  <div class="tutorial js-tutorial">
-    <div class="tutorial__in"><img src="img/2/instruction.png">
-      <div class="s2__nav js-nav">
-        <div class="s2__nav-link is-active">
-          <div class="s2__nav-link-text">Навигация</div>
+  <div class="container">
+    <div class="tutorial js-tutorial">
+      <div class="tutorial__in"><img src="img/2/instruction.png">
+        <div class="s2__nav js-nav">
+          <div class="s2__nav-link is-active">
+            <div class="s2__nav-link-text">Навигация</div>
+          </div>
+          <div class="s2__nav-link">
+            <div class="s2__nav-link-text">Контент</div>
+          </div>
+          <div class="s2__nav-link">
+            <div class="s2__nav-link-text">Подсказки</div>
+          </div>
         </div>
-        <div class="s2__nav-link">
-          <div class="s2__nav-link-text">Контент</div>
-        </div>
-        <div class="s2__nav-link">
-          <div class="s2__nav-link-text">Подсказки</div>
-        </div>
-      </div>
-      <div data-index="1" class="s2__tab is-active js-tab"><img src="img/2/slide-1.png" class="s2__img"></div>
-      <div data-index="2" class="s2__tab js-tab"><img src="img/2/slide-2.png" class="s2__img"></div>
-      <div data-index="3" class="s2__tab js-tab"><img src="img/2/slide-3.png" class="s2__img"></div>
-    </div>
-  </div>
-  <div class="header js-header">
-    <div class="header__logo js-logo"><svg class="icon icon-logo"><use xlink:href="img/sprite.svg#icon-logo"></use></svg></div>
-    <div class="header__back js-tutorial-back"><svg class="icon icon-tutorial-back"><use xlink:href="img/sprite.svg#icon-tutorial-back"></use></svg></div>
-    <div class="header__instruction js-instruction"><svg class="icon icon-settings"><use xlink:href="img/sprite.svg#icon-settings"></use></svg></div>
-  </div>
-  <div class="wrapper">
-    <div class="rel wrapper__in">
-      <div class="s8__plus-btn plus-btn js-plus-btn js-8-btn">
-        <div class="plus-btn__text plus-btn__text_plus"></div>
-      </div>
-      <div class="row">
-        <div class="s8__col text-left"><img src="img/8/text.png" class="s8__title"><img src="img/8/info.png" class="s8__info animated js-8-info"></div>
-        <div class="s8__col rel"><img src="img/8/wallet.png" class="s8__wallet"><img src="img/8/money.png" class="s8__money js-8-money"></div>
+        <div data-index="1" class="s2__tab is-active js-tab"><img src="img/2/slide-1.png" class="s2__img"></div>
+        <div data-index="2" class="s2__tab js-tab"><img src="img/2/slide-2.png" class="s2__img"></div>
+        <div data-index="3" class="s2__tab js-tab"><img src="img/2/slide-3.png" class="s2__img"></div>
       </div>
     </div>
-  </div>
-  <div class="footer js-footer">
-    <div class="footer__info js-info"><svg class="icon icon-instruction"><use xlink:href="img/sprite.svg#icon-instruction"></use></svg></div>
-    <div class="footer__counter">
-      <div class="footer__counter-left">Слайд:</div>
-      <div class="footer__counter-right">6 из 20</div>
+    <div class="header js-header">
+      <div class="header__logo js-logo"><svg class="icon icon-logo"><use xlink:href="img/sprite.svg#icon-logo"></use></svg></div>
+      <div class="header__back js-tutorial-back"><svg class="icon icon-tutorial-back"><use xlink:href="img/sprite.svg#icon-tutorial-back"></use></svg></div>
+      <div class="header__instruction js-instruction"><svg class="icon icon-settings"><use xlink:href="img/sprite.svg#icon-settings"></use></svg></div>
+    </div>
+    <div class="wrapper">
+      <div class="rel wrapper__in">
+        <div class="s8__plus-btn plus-btn js-plus-btn js-8-btn">
+          <div class="plus-btn__text plus-btn__text_plus"></div>
+        </div>
+        <div class="row">
+          <div class="s8__col text-left"><img src="img/8/text.png" srcset="img/8/text@2x.png 2x" class="s8__title"><img src="img/8/info.png" class="s8__info animated js-8-info"></div>
+          <div class="s8__col rel"><img src="img/8/wallet.png" class="s8__wallet"><img src="img/8/money.png" class="s8__money js-8-money"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer js-footer">
+      <div class="footer__info js-info"><svg class="icon icon-instruction"><use xlink:href="img/sprite.svg#icon-instruction"></use></svg></div>
+      <div class="footer__counter">
+        <div class="footer__counter-left">Слайд:</div>
+        <div class="footer__counter-right">6 из 20</div>
+      </div>
     </div>
   </div>
 </body>
 <script src="app.js"></script>
+<script>
+  $(document).ready(function() {
+    /* Slide 8 */
+    (function() {
+      var btn = $('.js-8-btn'),
+        wallet = $('.js-8-wallet'),
+        info = $('.js-8-info'),
+        money = $('.js-8-money');
+
+      disableSwipe();
+
+      $('body.s8').on('swipeleft', function() {
+        Android.openSlide($('body.s8').attr('data-next-slide'));
+      });
+      $('body.s8').on('swiperight', function() {
+        Android.openSlide($('body.s8').attr('data-prev-slide'));
+      });
+
+      btn.on('click', function() {
+        info.fadeToggle();
+        info.addClass('zoomIn');
+        money.toggleClass('is-active');
+      });
+    })();
+  });
+</script>
 
 </html>

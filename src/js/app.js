@@ -2,13 +2,11 @@
 //=include lib/jquery-ui.min.js
 //=include lib/jquery.mobile.custom.min.js
 //=include lib/jquery.ui.touch-punch.min.js
-//=include lib/hammer.min.js
 //=include lib/stars.js
 //=include lib/ion.rangeSlider.min.js
 //=include lib/slick.min.js
 //=include lib/slider.js
 //=include lib/jquery.transit.min.js
 //=include lib/particles.min.js
-//=include lib/jquery.onscreen.min.js
 //=include lib/circle-progress.min.js
 //=include lib/common.js

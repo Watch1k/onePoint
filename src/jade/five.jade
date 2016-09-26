@@ -6,50 +6,117 @@ block title
 	title 5
 block body
 	body.s5#s5(data-next-slide='six.html' data-prev-slide='four.html')
-		include includes/_tutorial
-		include includes/_header
-		.wrapper
-			.wrapper__in
-				.text-center
-					.s5__title
-						img(src='img/5/text.png')
-				.row.text-left
-					.col
-						.row
-							img(src='img/5/text-1.png')
-							.s5__slider.row
-								.s5__col
-									input.s5__range.js-5-range-1(type='text')
-								.s5__col
-									.s5__value.js-5-value-1
-						.row
-							img(src='img/5/text-2.png')
-							.s5__slider.row
-								.s5__col
-									input.s5__range.js-5-range-2(type='text')
-								.s5__col
-									.s5__value.js-5-value-2
-					.col
-						img(src='img/5/text-3.png')
-						.s5__radios
-							.s5__row.row
-								.s5__radios-col
-									.s5__radios-row.row
-										input.radio(name='s5radio' type='radio' id='radio1' checked)
-										label.radio-label(for='radio1') 0-100
-								.s5__radios-col
-									.s5__radios-row.row
-										input.radio(name='s5radio' type='radio' id='radio2')
-										label.radio-label(for='radio2') 200-300
-							.s5__row.row
-								.s5__radios-col
-									.s5__radios-row.row
-										input.radio(name='s5radio' type='radio' id='radio3')
-										label.radio-label(for='radio3') 100-200
-								.s5__radios-col
-									.s5__radios-row.row
-										input.radio(name='s5radio' type='radio' id='radio4')
-										label.radio-label(for='radio4') 300-400
-		include includes/_footer
+		.container
+			include includes/_tutorial
+			include includes/_header
+			.wrapper
+				.wrapper__in
+					.text-center
+						.s5__title
+							img(src='img/5/text.png')
+					.row.text-left
+						.col
+							.row
+								img(src='img/5/text-1.png')
+								.s5__slider.row
+									.s5__col
+										input.s5__range.js-5-range-1(type='text')
+									.s5__col
+										.s5__value.js-5-value-1
+							.row
+								img(src='img/5/text-2.png')
+								.s5__slider.row
+									.s5__col
+										input.s5__range.js-5-range-2(type='text')
+									.s5__col
+										.s5__value.js-5-value-2
+						.col
+							img(src='img/5/text-3.png')
+							.s5__radios
+								.s5__row.row
+									.s5__radios-col
+										.s5__radios-row.row
+											input.radio(name='s5radio' type='radio' id='radio1' checked)
+											label.radio-label(for='radio1') 0-100
+									.s5__radios-col
+										.s5__radios-row.row
+											input.radio(name='s5radio' type='radio' id='radio2')
+											label.radio-label(for='radio2') 200-300
+								.s5__row.row
+									.s5__radios-col
+										.s5__radios-row.row
+											input.radio(name='s5radio' type='radio' id='radio3')
+											label.radio-label(for='radio3') 100-200
+									.s5__radios-col
+										.s5__radios-row.row
+											input.radio(name='s5radio' type='radio' id='radio4')
+											label.radio-label(for='radio4') 300-400
+			include includes/_footer
 	block js
 		script(src="app.js")
+		script.
+			$(document).ready(function () {
+				/* Slide 5 */
+				(function () {
+					var range1 = $('.js-5-range-1'),
+									range2 = $('.js-5-range-2'),
+									value1 = $('.js-5-value-1'),
+									value2 = $('.js-5-value-2');
+
+					disableSwipe();
+
+					$('body.s5').on('swipeleft', function (e) {
+						if (!$(e.target).is('.irs') && !$(e.target).is('.irs-bar') && !$(e.target).is('.irs-slider') && !$(e.target).is('.irs-bar-edge')) {
+							Android.openSlide($('body.s5').attr('data-next-slide'));
+						}
+					});
+
+					$('body.s5').on('swiperight', function (e) {
+						if (!$(e.target).is('.irs') && !$(e.target).is('.irs-bar') && !$(e.target).is('.irs-slider') && !$(e.target).is('.irs-bar-edge')) {
+							Android.openSlide($('body.s5').attr('data-prev-slide'));
+						}
+					});
+
+					range1.ionRangeSlider({
+						type: 'single',
+						hide_min_max: true,
+						hide_from_to: true,
+						min: 0,
+						max: 35,
+						from: 0,
+						onStart: function (data) {
+							value1.html(data.from)
+						},
+						onChange: function (data) {
+							value1.html(data.from)
+						},
+						onFinish: function (data) {
+							value1.html(data.from)
+						},
+						onUpdate: function (data) {
+							value1.html(data.from)
+						}
+					});
+
+					range2.ionRangeSlider({
+						type: 'single',
+						hide_min_max: true,
+						hide_from_to: true,
+						min: 0,
+						max: 15,
+						from: 0,
+						onStart: function (data) {
+							value2.html(data.from)
+						},
+						onChange: function (data) {
+							value2.html(data.from)
+						},
+						onFinish: function (data) {
+							value2.html(data.from)
+						},
+						onUpdate: function (data) {
+							value2.html(data.from)
+						}
+					});
+				})();
+			});
